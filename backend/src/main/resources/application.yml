@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/interview_platform
+    username: postgres
+    password: ayush1923
+  jpa:
+    hibernate:
+      ddl-auto: update   # fine for a student project; use Flyway/Liquibase migrations for anything real
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:this-is-a-dev-only-secret-change-me-before-any-real-deployment-32chars}
+    expiration-ms: 86400000  # 24 hours
+  ai:
+    provider: ${AI_PROVIDER:mock}   # mock | openai
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+      model: gpt-4o-mini
