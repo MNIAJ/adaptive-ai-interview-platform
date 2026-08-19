@@ -1,68 +1,208 @@
-# Adaptive AI Placement Interview Platform
+# 🚀 Adaptive AI Interview Platform
 
-This is a working MVP skeleton, not the full enterprise system described in
-the master prompt. It implements the core loop end-to-end — auth, resume
-upload/parsing, an adaptive interview (weak answers trigger a same-topic
-follow-up, strong answers raise the difficulty and move on), and a report —
-for two seeded companies (Amazon, TCS Digital).
+An AI-powered placement interview platform that simulates real technical interviews with adaptive questioning, AI-based answer evaluation, resume analysis, and detailed performance reports.
 
-The adaptive algorithm here was proven working in a live sandbox test before
-this code was written: a weak answer correctly triggered a follow-up
-question on the same topic, a strong answer correctly advanced difficulty
-and moved to the next question, and the report correctly computed
-readiness % and weak/strong topics. `AdaptiveInterviewEngine.java` is that
-same logic, wired to real JPA entities and PostgreSQL instead of in-memory
-maps.
+The platform is designed to provide a realistic interview experience by dynamically adjusting question difficulty based on the candidate's performance, helping students prepare for company-specific placement interviews.
 
-**What's NOT in this MVP** (see the roadmap in-chat for suggested order to
-add these): Faculty/Placement Cell/Admin dashboards, the coding-interview
-editor, HR communication scoring, question-bank management UI, refresh
-tokens, Docker deployment. The architecture (pluggable AIEvaluationService,
-clean Controller→Service→Repository layering) is built so these slot in
-without rewrites.
+> **Project Status:** 🚧 Active Development
+
+---
+
+# ✨ Features
+
+## 🎯 Adaptive AI Interview Engine
+
+- Dynamic interview flow based on candidate performance
+- Difficulty automatically increases after strong answers
+- Weak answers trigger intelligent follow-up questions
+- Company-specific interview question banks
+- Topic-wise adaptive questioning
+
+## 🤖 AI Evaluation
+
+- Spring AI Integration
+- Pluggable AI evaluation architecture
+- Mock AI mode for development
+- Ready for OpenAI integration
+- Easily extendable to Gemini and other LLMs
+
+## 👨‍🎓 Student Features
+
+- Secure JWT Authentication
+- Student Registration & Login
+- Resume Upload
+- Resume Parsing
+- Company Selection
+- Adaptive Technical Interview
+- AI Generated Feedback
+- Interview Report & Analytics
+
+## 📊 Performance Analytics
+
+- Readiness Score
+- Topic-wise Performance
+- Strong Topics
+- Weak Topics
+- AI Feedback
+- Improvement Suggestions
+
+---
+
+# 🛠 Tech Stack
+
+## Backend
+
+- Java 21
+- Spring Boot 3
+- Spring Security
+- Spring AI
+- Spring Data JPA
+- PostgreSQL
+- JWT Authentication
+- Maven
+
+## Frontend
+
+- React
+- Vite
+- Axios
+- React Router
+
+## Database
+
+- PostgreSQL
+
+---
+
+# 📁 Project Structure
+
+```
+adaptive-ai-interview-platform
+│
+├── backend
+│   ├── src/main/java/com/aiplacement/interview
+│   │   ├── ai
+│   │   ├── config
+│   │   ├── controller
+│   │   ├── dto
+│   │   ├── engine
+│   │   ├── entity
+│   │   ├── exception
+│   │   ├── repository
+│   │   ├── security
+│   │   └── service
+│   │
+│   └── src/main/resources
+│
+├── frontend
+│   ├── src
+│   │   ├── api
+│   │   ├── components
+│   │   ├── pages
+│   │   └── assets
+│
+└── README.md
+```
+
+---
+
+# 🧠 Adaptive Interview Flow
+
+```
+Student Login
+      │
+      ▼
+Upload Resume
+      │
+      ▼
+Choose Company
+      │
+      ▼
+Interview Starts
+      │
+      ▼
+Answer Submitted
+      │
+      ▼
+AI Evaluation
+      │
+ ┌────┴────┐
+ │         │
+ ▼         ▼
+Strong    Weak
+Answer    Answer
+ │          │
+ ▼          ▼
+Increase  Follow-up
+Difficulty Question
+ │          │
+ └────┬─────┘
+      ▼
+ Next Question
+      │
+      ▼
+ Final Report
+```
+
+---
+
+# 🚀 Getting Started
 
 ## Prerequisites
 
-- Java 21 (JDK, not just JRE)
-- Maven (or just use your IDE's built-in Maven support)
+- Java 21
+- Maven
 - Node.js 18+
-- PostgreSQL running locally
+- PostgreSQL
 
-## 1. Database setup
+---
+
+## Clone the Repository
 
 ```bash
-createdb interview_platform
-# or, in psql:
-# CREATE DATABASE interview_platform;
+git clone git@github.com:MNIAJ/adaptive-ai-interview-platform.git
+cd adaptive-ai-interview-platform
 ```
 
-Default credentials expected (override via env vars — see `application.yml`):
-- username: `postgres`
-- password: `postgres`
+---
 
-## 2. Run the backend
+## Database Setup
+
+Create a PostgreSQL database.
+
+```sql
+CREATE DATABASE interview_platform;
+```
+
+Default credentials:
+
+```
+Username : postgres
+Password : postgres
+```
+
+Update them in `backend/src/main/resources/application.yml` if required.
+
+---
+
+## Backend Setup
 
 ```bash
 cd backend
 mvn spring-boot:run
 ```
 
-On first run, `DataSeeder.java` automatically inserts the two companies and
-their question banks — you don't need to do anything manually.
+The backend will start at:
 
-The API will be at `http://localhost:8080`. AI evaluation runs in **mock
-mode by default** (a heuristic based on answer length/detail — same one
-proven in the demo) so you can run everything with zero API keys.
-
-To use a real LLM instead, set these environment variables before starting:
-```bash
-export AI_PROVIDER=openai
-export OPENAI_API_KEY=sk-...
-mvn spring-boot:run
 ```
-(`OpenAIEvaluationService.java` is already wired up — this just activates it.)
+http://localhost:8080
+```
 
-## 3. Run the frontend
+On the first run, sample companies and interview questions are automatically seeded into the database.
+
+---
+
+## Frontend Setup
 
 ```bash
 cd frontend
@@ -70,38 +210,80 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173`. Register a student account, optionally upload
-a resume PDF, pick a company, and start the interview.
-
-## Project structure
+Frontend runs at:
 
 ```
-backend/
-  src/main/java/com/aiplacement/interview/
-    entity/       JPA entities (User, Company, Question, InterviewSession, Response, Resume)
-    repository/   Spring Data JPA repositories
-    dto/          Request/response DTOs — controllers never expose entities directly
-    security/     JwtUtil + JwtAuthFilter
-    config/       SecurityConfig, DataSeeder
-    ai/           AIEvaluationService interface + Mock/OpenAI implementations
-    engine/       AdaptiveInterviewEngine — the core branching algorithm
-    service/      AuthService, InterviewService, ResumeService — business logic lives here
-    controller/   Thin REST controllers
-    exception/    ApiException + GlobalExceptionHandler
-frontend/
-  src/
-    api/axios.js        shared HTTP client, auto-attaches JWT
-    pages/               Login, Register, Dashboard, Interview, Report
-    components/          ProtectedRoute
+http://localhost:5173
 ```
 
-## A note on how this was built
+---
 
-This sandbox can't reach Maven Central, so the backend couldn't be
-compiled/run inside the chat — only carefully written against Spring Boot
-3.3 APIs. **Before you dig into feature work, do a clean `mvn spring-boot:run`
-locally first** and fix whatever small issues surface (there's a real chance
-of a typo or minor API mismatch somewhere in 38 files written without a
-compiler checking them). That first successful run is also a great forcing
-function to make sure your local Postgres/Java/Maven setup is solid before
-you start building on top of it.
+# 🤖 AI Configuration
+
+The project currently supports two AI modes.
+
+### Mock Mode (Default)
+
+No API key required.
+
+Useful for local development and testing.
+
+### OpenAI Mode
+
+Set the following environment variables before starting the backend:
+
+```bash
+export AI_PROVIDER=openai
+export OPENAI_API_KEY=your_api_key
+```
+
+The architecture is built using Spring AI, making it easy to integrate additional providers like Gemini in the future.
+
+---
+
+# 📈 Current Features
+
+- ✅ JWT Authentication
+- ✅ Resume Upload
+- ✅ Resume Parsing
+- ✅ Company Selection
+- ✅ Adaptive Interview Engine
+- ✅ AI Evaluation Service
+- ✅ Interview Reports
+- ✅ Spring AI Integration
+- ✅ PostgreSQL Persistence
+
+---
+
+# 🚧 Upcoming Features
+
+- Faculty Dashboard
+- Placement Cell Dashboard
+- Admin Panel
+- Coding Interview Module
+- Live Code Editor
+- HR Communication Evaluation
+- Resume Scoring
+- Question Bank Management
+- Docker Deployment
+- Refresh Tokens
+- Email Notifications
+- Multi-LLM Support (Gemini, Claude)
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and improvements are always welcome.
+
+Feel free to fork the repository, create a feature branch, and submit a pull request.
+
+---
+
+# 📄 License
+
+This project is developed for educational purposes and placement preparation.
+
+---
+
+## ⭐ If you like this project, consider giving it a Star!
