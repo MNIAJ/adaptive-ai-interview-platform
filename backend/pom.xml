@@ -18,9 +18,41 @@
 
     <properties>
         <java.version>21</java.version>
+        <spring-ai.version>1.0.0-M4</spring-ai.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring AI's BOM pins compatible versions of all spring-ai-* artifacts
+                 so you never have to hand-pick versions that fight each other. -->
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>${spring-ai.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <!-- Spring AI milestone builds aren't on Maven Central yet -->
+        <repository>
+            <id>spring-milestones</id>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <!-- Spring AI: OpenAI-compatible ChatClient. This is what
+             SpringAIEvaluationService.java uses. Swap for
+             spring-ai-vertex-ai-gemini-spring-boot-starter later if you'd
+             rather use Gemini — the ChatClient code barely changes. -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+        </dependency>
+
         <!-- Web / REST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

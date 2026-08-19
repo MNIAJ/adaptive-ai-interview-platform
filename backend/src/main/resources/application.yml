@@ -17,13 +17,19 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:}     # only needed if app.ai.provider=springai
+      chat:
+        options:
+          model: gpt-4o-mini
 
 app:
   jwt:
     secret: ${JWT_SECRET:this-is-a-dev-only-secret-change-me-before-any-real-deployment-32chars}
     expiration-ms: 86400000  # 24 hours
   ai:
-    provider: ${AI_PROVIDER:mock}   # mock | openai
+    provider: ${AI_PROVIDER:mock}   # mock | openai | springai
     openai:
       api-key: ${OPENAI_API_KEY:}
       model: gpt-4o-mini
