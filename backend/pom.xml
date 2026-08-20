@@ -44,13 +44,10 @@
     </repositories>
 
     <dependencies>
-        <!-- Spring AI: OpenAI-compatible ChatClient. This is what
-             SpringAIEvaluationService.java uses. Swap for
-             spring-ai-vertex-ai-gemini-spring-boot-starter later if you'd
-             rather use Gemini — the ChatClient code barely changes. -->
+        <!-- Spring AI: Ollama -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+            <artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- Web / REST -->
