@@ -13,6 +13,7 @@ export default function Interview() {
   const [current, setCurrent] = useState(() => JSON.parse(sessionStorage.getItem('currentQuestion')))
   const [answer, setAnswer] = useState('')
   const [lastFeedback, setLastFeedback] = useState(null)
+  const [questionsAnswered, setQuestionsAnswered] = useState(0)
   const [submitting, setSubmitting] = useState(false)
 
   async function handleSubmit(e) {
@@ -26,6 +27,7 @@ export default function Interview() {
       })
 
       setLastFeedback({ score: res.data.lastScore, feedback: res.data.lastFeedback, wasFollowUp: res.data.wasFollowUp })
+      setQuestionsAnswered((n) => n + 1)
 
       if (res.data.finished) {
         navigate(`/report/${sessionId}`)
@@ -39,31 +41,38 @@ export default function Interview() {
     }
   }
 
-  if (!current) return <p className="p-8">No active question — go back to the dashboard and start an interview.</p>
+  if (!current) return <p>No active question — go back to the dashboard and start an interview.</p>
 
   return (
-    <div className="min-h-screen bg-slate-50 p-8">
-      <div className="max-w-2xl mx-auto">
-        {lastFeedback && (
-          <div className={`p-4 rounded-lg mb-6 ${lastFeedback.score >= 6 ? 'bg-green-50' : 'bg-amber-50'}`}>
-            <p className="text-sm font-medium">Previous answer score: {lastFeedback.score}/10</p>
-            <p className="text-sm text-slate-600">{lastFeedback.feedback}</p>
-            {lastFeedback.wasFollowUp && <p className="text-xs text-slate-500 mt-1">(this was a follow-up on the same topic)</p>}
-          </div>
-        )}
-
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <p className="text-xs text-slate-500 mb-2 uppercase tracking-wide">{current.nextQuestionTopic}</p>
-          <h2 className="text-lg font-medium mb-4">{current.nextQuestionText}</h2>
-          <form onSubmit={handleSubmit}>
-            <textarea className="w-full border rounded px-3 py-2 mb-4 h-32"
-              placeholder="Type your answer..." value={answer}
-              onChange={(e) => setAnswer(e.target.value)} required />
-            <button className="bg-blue-600 text-white rounded px-4 py-2" disabled={submitting}>
-              {submitting ? 'Submitting...' : 'Submit Answer'}
-            </button>
-          </form>
+    <div>
+      <div className="flex items-center justify-between mb-6">
+        <p className="text-sm text-slate-500">Question {questionsAnswered + 1}</p>
+        <div className="flex items-center gap-1.5">
+          {[1, 2, 3, 4, 5].map((d) => (
+            <div key={d} className={`w-6 h-1.5 rounded-full ${d <= (current.currentDifficulty || 3) ? 'bg-indigo-600' : 'bg-slate-200'}`} />
+          ))}
         </div>
+      </div>
+
+      {lastFeedback && (
+        <div className={`p-4 rounded-xl mb-6 border ${lastFeedback.score >= 6 ? 'bg-green-50 border-green-200' : 'bg-amber-50 border-amber-200'}`}>
+          <p className="text-sm font-medium text-slate-800">Previous answer score: {lastFeedback.score}/10</p>
+          <p className="text-sm text-slate-600 mt-0.5">{lastFeedback.feedback}</p>
+          {lastFeedback.wasFollowUp && <p className="text-xs text-slate-500 mt-1.5">↳ this was a follow-up on the same topic</p>}
+        </div>
+      )}
+
+      <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+        <p className="text-xs text-indigo-600 font-medium mb-2 uppercase tracking-wide">{current.nextQuestionTopic}</p>
+        <h2 className="text-lg font-medium text-slate-900 mb-5">{current.nextQuestionText}</h2>
+        <form onSubmit={handleSubmit}>
+          <textarea className="w-full border border-slate-300 rounded-lg px-3 py-2 mb-4 h-32 text-sm"
+            placeholder="Type your answer..." value={answer}
+            onChange={(e) => setAnswer(e.target.value)} required />
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg px-5 py-2.5 font-medium disabled:opacity-50" disabled={submitting}>
+            {submitting ? 'Submitting...' : 'Submit Answer'}
+          </button>
+        </form>
       </div>
     </div>
   )
