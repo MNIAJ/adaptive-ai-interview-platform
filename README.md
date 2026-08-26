@@ -1,56 +1,64 @@
-# 🚀 Adaptive AI Interview Platform
+# Adaptive AI Interview Platform
 
-An AI-powered placement interview platform that simulates real technical interviews with adaptive questioning, AI-based answer evaluation, resume analysis, and detailed performance reports.
+An AI-powered placement interview platform that simulates realistic technical interviews using adaptive questioning, AI-driven answer evaluation, resume analysis, and comprehensive performance reports.
 
-The platform is designed to provide a realistic interview experience by dynamically adjusting question difficulty based on the candidate's performance, helping students prepare for company-specific placement interviews.
+The platform dynamically adjusts interview difficulty based on candidate performance, providing a personalized interview experience that helps students prepare for company-specific technical interviews.
 
-> **Project Status:** 🚧 Active Development
+> **Project Status:** Active Development
 
 ---
 
-# ✨ Features
+## Overview
 
-## 🎯 Adaptive AI Interview Engine
+The Adaptive AI Interview Platform is designed to bridge the gap between traditional coding practice and real technical interviews. Instead of presenting a fixed sequence of questions, the platform continuously evaluates candidate responses and adapts the interview in real time.
+
+The system analyzes resumes, generates company-focused interview sessions, evaluates answers using AI, and provides detailed insights into technical strengths, weaknesses, and overall interview readiness.
+
+---
+
+## Key Features
+
+### Adaptive Interview Engine
 
 - Dynamic interview flow based on candidate performance
-- Difficulty automatically increases after strong answers
-- Weak answers trigger intelligent follow-up questions
+- Automatic difficulty adjustment
+- Intelligent follow-up questions for weak responses
 - Company-specific interview question banks
 - Topic-wise adaptive questioning
 
-## 🤖 AI Evaluation
+### AI-Powered Evaluation
 
-- Spring AI Integration
-- Pluggable AI evaluation architecture
-- Mock AI mode for development
+- AI-based answer assessment
+- Spring AI integration
+- Pluggable AI provider architecture
+- Mock AI mode for local development
 - Ready for OpenAI integration
-- Easily extendable to Gemini and other LLMs
+- Easily extendable to additional LLM providers such as Gemini and Claude
 
-## 👨‍🎓 Student Features
+### Student Portal
 
-- Secure JWT Authentication
-- Student Registration & Login
-- Resume Upload
-- Resume Parsing
-- Company Selection
-- Adaptive Technical Interview
-- AI Generated Feedback
-- Interview Report & Analytics
+- JWT-based authentication
+- Student registration and login
+- Resume upload
+- Resume parsing
+- Company selection
+- Adaptive technical interviews
+- AI-generated feedback
+- Detailed interview reports
 
-## 📊 Performance Analytics
+### Performance Analytics
 
-- Readiness Score
-- Topic-wise Performance
-- Strong Topics
-- Weak Topics
-- AI Feedback
-- Improvement Suggestions
+- Overall readiness score
+- Topic-wise performance analysis
+- Strong and weak topic identification
+- AI-generated feedback
+- Personalized improvement suggestions
 
 ---
 
-# 🛠 Tech Stack
+## Technology Stack
 
-## Backend
+### Backend
 
 - Java 21
 - Spring Boot 3
@@ -61,22 +69,22 @@ The platform is designed to provide a realistic interview experience by dynamica
 - JWT Authentication
 - Maven
 
-## Frontend
+### Frontend
 
 - React
 - Vite
 - Axios
 - React Router
 
-## Database
+### Database
 
 - PostgreSQL
 
 ---
 
-# 📁 Project Structure
+## Project Structure
 
-```
+```text
 adaptive-ai-interview-platform
 │
 ├── backend
@@ -97,31 +105,34 @@ adaptive-ai-interview-platform
 ├── frontend
 │   ├── src
 │   │   ├── api
+│   │   ├── assets
 │   │   ├── components
-│   │   ├── pages
-│   │   └── assets
+│   │   └── pages
 │
 └── README.md
 ```
 
 ---
 
-# 🧠 Adaptive Interview Flow
+## Adaptive Interview Workflow
 
-```
+```text
 Student Login
       │
       ▼
 Upload Resume
       │
       ▼
-Choose Company
+Resume Parsing
       │
       ▼
-Interview Starts
+Select Company
       │
       ▼
-Answer Submitted
+Interview Begins
+      │
+      ▼
+Answer Submission
       │
       ▼
 AI Evaluation
@@ -133,26 +144,28 @@ Strong    Weak
 Answer    Answer
  │          │
  ▼          ▼
-Increase  Follow-up
-Difficulty Question
+Increase  Generate
+Difficulty Follow-up
  │          │
  └────┬─────┘
       ▼
- Next Question
+Next Question
       │
       ▼
- Final Report
+Performance Report
 ```
 
 ---
 
-# 🚀 Getting Started
+## Getting Started
 
-## Prerequisites
+### Prerequisites
+
+Ensure the following software is installed:
 
 - Java 21
 - Maven
-- Node.js 18+
+- Node.js 18 or later
 - PostgreSQL
 
 ---
@@ -161,6 +174,7 @@ Difficulty Question
 
 ```bash
 git clone git@github.com:MNIAJ/adaptive-ai-interview-platform.git
+
 cd adaptive-ai-interview-platform
 ```
 
@@ -174,14 +188,20 @@ Create a PostgreSQL database.
 CREATE DATABASE interview_platform;
 ```
 
-Default credentials:
+Default database credentials:
 
-```
-Username : postgres
-Password : postgres
+```text
+Username: postgres
+Password: postgres
 ```
 
-Update them in `backend/src/main/resources/application.yml` if required.
+Update the configuration in:
+
+```text
+backend/src/main/resources/application.yml
+```
+
+if your credentials are different.
 
 ---
 
@@ -189,16 +209,17 @@ Update them in `backend/src/main/resources/application.yml` if required.
 
 ```bash
 cd backend
+
 mvn spring-boot:run
 ```
 
-The backend will start at:
+The backend server will start on:
 
-```
+```text
 http://localhost:8080
 ```
 
-On the first run, sample companies and interview questions are automatically seeded into the database.
+During the initial startup, sample companies and interview questions are automatically seeded into the database.
 
 ---
 
@@ -206,84 +227,82 @@ On the first run, sample companies and interview questions are automatically see
 
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
-Frontend runs at:
+The frontend will be available at:
 
-```
+```text
 http://localhost:5173
 ```
 
 ---
 
-# 🤖 AI Configuration
+## AI Configuration
 
-The project currently supports two AI modes.
+The platform currently supports two AI execution modes.
 
 ### Mock Mode (Default)
 
-No API key required.
-
-Useful for local development and testing.
+- No API key required
+- Ideal for local development and testing
 
 ### OpenAI Mode
 
-Set the following environment variables before starting the backend:
+Set the following environment variables before starting the backend.
 
 ```bash
 export AI_PROVIDER=openai
 export OPENAI_API_KEY=your_api_key
 ```
 
-The architecture is built using Spring AI, making it easy to integrate additional providers like Gemini in the future.
+The project is built using Spring AI, allowing additional providers such as Gemini and Claude to be integrated with minimal changes.
 
 ---
 
-# 📈 Current Features
+## Current Features
 
-- ✅ JWT Authentication
-- ✅ Resume Upload
-- ✅ Resume Parsing
-- ✅ Company Selection
-- ✅ Adaptive Interview Engine
-- ✅ AI Evaluation Service
-- ✅ Interview Reports
-- ✅ Spring AI Integration
-- ✅ PostgreSQL Persistence
+- JWT Authentication
+- Resume Upload
+- Resume Parsing
+- Company Selection
+- Adaptive Interview Engine
+- AI Answer Evaluation
+- Interview Reports
+- Spring AI Integration
+- PostgreSQL Persistence
 
 ---
 
-# 🚧 Upcoming Features
+## Planned Features
 
 - Faculty Dashboard
 - Placement Cell Dashboard
 - Admin Panel
 - Coding Interview Module
-- Live Code Editor
-- HR Communication Evaluation
+- Integrated Code Editor
+- HR Communication Assessment
 - Resume Scoring
-- Question Bank Management
-- Docker Deployment
-- Refresh Tokens
+- Interview Question Management
+- Docker Support
+- Refresh Token Authentication
 - Email Notifications
-- Multi-LLM Support (Gemini, Claude)
+- Multi-LLM Support (Gemini, Claude, and others)
 
 ---
 
-# 🤝 Contributing
+## Future Scope
 
-Contributions, suggestions, and improvements are always welcome.
+The platform is designed with extensibility in mind. Planned enhancements include:
 
-Feel free to fork the repository, create a feature branch, and submit a pull request.
-
----
-
-# 📄 License
-
-This project is developed for educational purposes and placement preparation.
-
----
-
-## ⭐ If you like this project, consider giving it a Star!
+- Voice-based interviews
+- Real-time coding assessments
+- Behavioral interview simulation
+- Company-specific interview preparation
+- Advanced analytics dashboard
+- Multi-language interview support
+- AI-powered resume optimization
+- Interview recording and playback
