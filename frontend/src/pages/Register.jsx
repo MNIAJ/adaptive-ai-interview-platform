@@ -18,7 +18,14 @@ export default function Register() {
       localStorage.setItem('token', res.data.token)
       navigate('/')
     } catch (err) {
-      setError(err.response?.data?.error || err.response?.data?.password || 'Registration failed')
+      const msg =
+          err.response?.data?.error ||
+          err.response?.data?.email ||
+          err.response?.data?.password ||
+          err.response?.data?.message ||
+          "Registration failed";
+      setError(msg);
+
     } finally { setLoading(false) }
   }
 

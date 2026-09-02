@@ -6,7 +6,7 @@ const COMPANIES = [
   { name: 'Amazon',    difficulty: 'HIGH',   color: '#ff9900', topics: 'DSA · Leadership · System Design' },
   { name: 'Microsoft', difficulty: 'HIGH',   color: '#00a1f1', topics: 'OOP · DSA · Problem Solving' },
   { name: 'Google',    difficulty: 'HIGH',   color: '#34a853', topics: 'DSA · System Design · Problem Solving' },
-  { name: 'TCS', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DBMS · OOP · Problem Solving' },
+  { name: 'TCS Digital', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DBMS · OOP · Problem Solving' },
   { name: 'Infosys',   difficulty: 'MEDIUM', color: '#007cc3', topics: 'CS Fundamentals · Communication · DBMS' },
   { name: 'Accenture', difficulty: 'MEDIUM', color: '#a100ff', topics: 'Communication · OOP · Reasoning' },
   { name: 'Capgemini', difficulty: 'MEDIUM', color: '#0070ad', topics: 'Communication · DSA · DBMS' },
