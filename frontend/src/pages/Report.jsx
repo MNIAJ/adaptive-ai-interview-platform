@@ -3,48 +3,91 @@ import { useParams, Link } from 'react-router-dom'
 import api from '../api/axios.js'
 
 export default function Report() {
-  const { sessionId } = useParams()
-  const [report, setReport] = useState(null)
-  const [error, setError] = useState('')
+    const { sessionId } = useParams()
+    const [report, setReport] = useState(null)
+    const [error, setError] = useState('')
 
-  useEffect(() => {
-    api.get(`/interview/report/${sessionId}`)
-      .then((res) => setReport(res.data))
-      .catch((err) => setError(err.response?.data?.error || 'Could not load report'))
-  }, [sessionId])
+    useEffect(() => {
+        api.get(`/interview/report/${sessionId}`)
+            .then(res => setReport(res.data))
+            .catch(err => setError(err.response?.data?.error || 'Could not load report'))
+    }, [sessionId])
 
-  if (error) return <p className="text-red-600">{error}</p>
-  if (!report) return <p className="text-slate-500">Loading report...</p>
-
-  return (
-    <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-      <p className="text-xs text-indigo-600 font-medium uppercase tracking-wide mb-1">Interview Report</p>
-      <h1 className="text-2xl font-semibold text-slate-900 mb-1">{report.company}</h1>
-      <p className="text-slate-500 mb-6">{report.questionsAsked} questions answered</p>
-
-      <div className="flex gap-10 mb-8">
-        <div>
-          <p className="text-3xl font-semibold text-slate-900">{report.averageScore}<span className="text-lg text-slate-400">/10</span></p>
-          <p className="text-sm text-slate-500">Average score</p>
+    if (error) return <div style={{ padding: 40, color: 'var(--red)', fontSize: 14 }}>{error}</div>
+    if (!report) return (
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 60 }}>
+            <div style={{ color: 'var(--text-muted)', fontSize: 14 }}>Loading report...</div>
         </div>
-        <div>
-          <p className="text-3xl font-semibold text-indigo-600">{report.readinessPercent}%</p>
-          <p className="text-sm text-slate-500">Company readiness</p>
-        </div>
-      </div>
+    )
 
-      <div className="grid grid-cols-2 gap-4 mb-8">
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-          <h2 className="font-medium text-green-800 text-sm mb-1">Strong topics</h2>
-          <p className="text-sm text-green-900">{report.strongTopics.join(', ') || 'None yet'}</p>
-        </div>
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-          <h2 className="font-medium text-amber-800 text-sm mb-1">Weak topics</h2>
-          <p className="text-sm text-amber-900">{report.weakTopics.join(', ') || 'None yet'}</p>
-        </div>
-      </div>
+    const readiness = report.readinessPercent
+    const scoreColor = readiness >= 70 ? 'var(--green)' : readiness >= 50 ? 'var(--amber)' : 'var(--red)'
 
-      <Link to="/" className="text-indigo-600 text-sm font-medium">← Back to dashboard</Link>
-    </div>
-  )
+    return (
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            {/* Header */}
+            <div style={{ marginBottom: 28 }}>
+                <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Interview Complete</p>
+                <h1 style={{ fontSize: 26, fontWeight: 700 }}>{report.company}</h1>
+                <p style={{ color: 'var(--text-muted)', fontSize: 13, marginTop: 4 }}>{report.questionsAsked} questions answered</p>
+            </div>
+
+            {/* Score cards */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
+                <div className="card" style={{ padding: 20 }}>
+                    <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>Average Score</p>
+                    <p style={{ fontSize: 36, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1 }}>{report.averageScore}<span style={{ fontSize: 16, color: 'var(--text-muted)', fontWeight: 400 }}>/10</span></p>
+                </div>
+                <div className="card" style={{ padding: 20 }}>
+                    <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>Company Readiness</p>
+                    <p style={{ fontSize: 36, fontWeight: 700, color: scoreColor, lineHeight: 1 }}>{readiness}<span style={{ fontSize: 16, fontWeight: 400 }}>%</span></p>
+                    <div style={{ marginTop: 10, height: 4, borderRadius: 2, background: 'var(--bg-raised)' }}>
+                        <div style={{ width: `${readiness}%`, height: '100%', borderRadius: 2, background: scoreColor, transition: 'width 0.6s ease' }} />
+                    </div>
+                </div>
+            </div>
+
+            {/* Topics */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 24 }}>
+                <div className="card" style={{ padding: 20 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+                        <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--green)' }} />
+                        <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)' }}>Strong topics</p>
+                    </div>
+                    {report.strongTopics.length > 0
+                        ? report.strongTopics.map(t => (
+                            <div key={t} style={{ padding: '6px 0', borderBottom: '1px solid var(--border)', fontSize: 13, color: 'var(--text-secondary)' }}>{t}</div>
+                        ))
+                        : <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>None yet</p>}
+                </div>
+                <div className="card" style={{ padding: 20 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+                        <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--amber)' }} />
+                        <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)' }}>Needs work</p>
+                    </div>
+                    {report.weakTopics.length > 0
+                        ? report.weakTopics.map(t => (
+                            <div key={t} style={{ padding: '6px 0', borderBottom: '1px solid var(--border)', fontSize: 13, color: 'var(--text-secondary)' }}>{t}</div>
+                        ))
+                        : <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>None — great session!</p>}
+                </div>
+            </div>
+
+            {/* Recommendation */}
+            <div className="card" style={{ padding: 20, marginBottom: 24, background: 'var(--accent-dim)', borderColor: 'var(--accent)44' }}>
+                <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--accent)', marginBottom: 6 }}>Recommendation</p>
+                <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+                    {readiness >= 70
+                        ? `Strong performance. Focus on refining system design and edge cases for ${report.company}'s interview rounds.`
+                        : readiness >= 50
+                            ? `Good foundation. Spend more time on ${report.weakTopics.slice(0,2).join(' and ')} — these came up weak this session.`
+                            : `Need more practice before ${report.company}. Revisit fundamentals in ${report.weakTopics.slice(0,2).join(' and ')} and attempt another session.`}
+                </p>
+            </div>
+
+            <div style={{ display: 'flex', gap: 12 }}>
+                <Link to="/" className="btn-primary" style={{ textDecoration: 'none', padding: '11px 24px' }}>Practice again</Link>
+            </div>
+        </div>
+    )
 }

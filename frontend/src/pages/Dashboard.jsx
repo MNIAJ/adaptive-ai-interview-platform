@@ -2,101 +2,157 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from '../api/axios.js'
 
-// Hardcoded here for the MVP — a real Phase-4 version would fetch this
-// from GET /api/companies once that endpoint exists. Kept in sync with
-// DataSeeder.java's seeded companies.
-const COMPANIES = ['Amazon', 'Microsoft', 'Google', 'TCS Digital', 'Infosys', 'Accenture', 'Capgemini', 'Deloitte']
-const INTERVIEW_TYPES = ['TECHNICAL', 'HR', 'BEHAVIORAL', 'CORE_CS', 'CODING']
+const COMPANIES = [
+  { name: 'Amazon',    difficulty: 'HIGH',   color: '#ff9900', topics: 'DSA · Leadership · System Design' },
+  { name: 'Microsoft', difficulty: 'HIGH',   color: '#00a1f1', topics: 'OOP · DSA · Problem Solving' },
+  { name: 'Google',    difficulty: 'HIGH',   color: '#34a853', topics: 'DSA · System Design · Problem Solving' },
+  { name: 'TCS', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DBMS · OOP · Problem Solving' },
+  { name: 'Infosys',   difficulty: 'MEDIUM', color: '#007cc3', topics: 'CS Fundamentals · Communication · DBMS' },
+  { name: 'Accenture', difficulty: 'MEDIUM', color: '#a100ff', topics: 'Communication · OOP · Reasoning' },
+  { name: 'Capgemini', difficulty: 'MEDIUM', color: '#0070ad', topics: 'Communication · DSA · DBMS' },
+  { name: 'Deloitte',  difficulty: 'MEDIUM', color: '#86bc25', topics: 'Communication · Reasoning · CS Fundamentals' },
+]
+
+const INTERVIEW_TYPES = [
+  { value: 'TECHNICAL',  label: 'Technical',  desc: 'DSA, System Design, Core CS' },
+  { value: 'HR',         label: 'HR',          desc: 'Behavioural, Communication' },
+  { value: 'BEHAVIORAL', label: 'Behavioural', desc: 'Situational, Leadership' },
+  { value: 'CORE_CS',    label: 'Core CS',     desc: 'OS, Networks, DBMS, OOP' },
+]
 
 export default function Dashboard() {
-  const [company, setCompany] = useState(COMPANIES[0])
-  const [type, setType] = useState(INTERVIEW_TYPES[0])
+  const [selectedCompany, setSelectedCompany] = useState(null)
+  const [interviewType, setInterviewType] = useState('TECHNICAL')
   const [resumeFile, setResumeFile] = useState(null)
   const [resumeResult, setResumeResult] = useState(null)
+  const [uploading, setUploading] = useState(false)
+  const [starting, setStarting] = useState(false)
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
-  async function handleUploadResume(e) {
+  async function handleUpload(e) {
     e.preventDefault()
     if (!resumeFile) return
-    const formData = new FormData()
-    formData.append('file', resumeFile)
+    setUploading(true); setError('')
+    const fd = new FormData()
+    fd.append('file', resumeFile)
     try {
-      const res = await api.post('/resume/upload', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      })
+      const res = await api.post('/resume/upload', fd, { headers: { 'Content-Type': 'multipart/form-data' } })
       setResumeResult(res.data)
-    } catch (err) {
-      setError(err.response?.data?.error || 'Resume upload failed')
-    }
+    } catch (err) { setError(err.response?.data?.error || 'Upload failed') }
+    finally { setUploading(false) }
   }
 
-  async function handleStartInterview() {
-    setError('')
+  async function handleStart() {
+    if (!selectedCompany) { setError('Select a company first'); return }
+    setStarting(true); setError('')
     try {
-      const res = await api.post('/interview/start', { companyName: company, interviewType: type })
+      const res = await api.post('/interview/start', { companyName: selectedCompany.name, interviewType })
       sessionStorage.setItem('currentQuestion', JSON.stringify(res.data))
       navigate(`/interview/${res.data.sessionId}`)
-    } catch (err) {
-      setError(err.response?.data?.error || 'Could not start interview')
-    }
+    } catch (err) { setError(err.response?.data?.error || 'Could not start interview') }
+    finally { setStarting(false) }
   }
 
   return (
-    <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold text-slate-900">Welcome back</h1>
-        <p className="text-slate-500 mt-1">Upload your resume, then start a mock interview tailored to a company.</p>
-      </div>
-
-      {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
-
-      <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
-        <div className="flex items-center gap-2 mb-3">
-          <span className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
-          <h2 className="font-medium text-slate-800">Upload your resume</h2>
-          <span className="text-xs text-slate-400">(optional)</span>
+      <div>
+        {/* Header */}
+        <div style={{ marginBottom: 32 }}>
+          <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 4 }}>Mock Interviews</h1>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Choose a company and interview type to begin your session.</p>
         </div>
-        <form onSubmit={handleUploadResume} className="flex gap-3">
-          <input className="text-sm" type="file" accept="application/pdf"
-            onChange={(e) => setResumeFile(e.target.files[0])} />
-          <button className="bg-slate-900 hover:bg-slate-800 text-white rounded-lg px-4 py-2 text-sm font-medium" type="submit">
-            Upload
-          </button>
-        </form>
-        {resumeResult && (
-          <div className="mt-4 bg-slate-50 rounded-lg p-3">
-            <p className="text-sm text-slate-600">
-              <span className="font-medium text-slate-800">Skills detected: </span>
-              {resumeResult.skillsFound.join(', ') || 'none found'}
-            </p>
-          </div>
+
+        {error && (
+            <div style={{ background: 'var(--red-dim)', border: '1px solid var(--red)', borderRadius: 8, padding: '10px 14px', marginBottom: 20, fontSize: 13, color: 'var(--red)' }}>
+              {error}
+            </div>
         )}
-      </div>
 
-      <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
-          <h2 className="font-medium text-slate-800">Start a mock interview</h2>
-        </div>
-        <div className="grid grid-cols-2 gap-3 mb-5">
-          <div>
-            <label className="block text-xs text-slate-500 mb-1">Company</label>
-            <select className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" value={company} onChange={(e) => setCompany(e.target.value)}>
-              {COMPANIES.map((c) => <option key={c} value={c}>{c}</option>)}
-            </select>
+        {/* Resume Upload */}
+        <div className="card" style={{ padding: 20, marginBottom: 24 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
+            <div>
+              <p style={{ fontWeight: 500, color: 'var(--text-primary)', marginBottom: 2 }}>Resume Analysis</p>
+              <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>Upload your PDF to auto-detect skills and personalise questions</p>
+            </div>
+            <form onSubmit={handleUpload} style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+              <label style={{
+                background: 'var(--bg-raised)', border: '1px solid var(--border)', borderRadius: 8,
+                padding: '8px 14px', fontSize: 13, color: 'var(--text-secondary)', cursor: 'pointer'
+              }}>
+                {resumeFile ? resumeFile.name : 'Choose PDF'}
+                <input type="file" accept="application/pdf" style={{ display: 'none' }} onChange={e => setResumeFile(e.target.files[0])} />
+              </label>
+              {resumeFile && (
+                  <button className="btn-ghost" type="submit" disabled={uploading} style={{ padding: '8px 16px', fontSize: 13 }}>
+                    {uploading ? 'Analysing...' : 'Upload'}
+                  </button>
+              )}
+            </form>
           </div>
-          <div>
-            <label className="block text-xs text-slate-500 mb-1">Interview type</label>
-            <select className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" value={type} onChange={(e) => setType(e.target.value)}>
-              {INTERVIEW_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
-            </select>
+          {resumeResult && (
+              <div style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid var(--border)' }}>
+                <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>Skills detected from your resume:</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {resumeResult.skillsFound.map(s => (
+                      <span key={s} style={{ background: 'var(--accent-dim)', color: 'var(--accent)', border: '1px solid var(--accent)44', borderRadius: 99, padding: '2px 10px', fontSize: 11, fontWeight: 600 }}>{s}</span>
+                  ))}
+                  {resumeResult.skillsFound.length === 0 && <span style={{ color: 'var(--text-muted)', fontSize: 12 }}>No known skills detected — try ensuring your PDF has selectable text.</span>}
+                </div>
+              </div>
+          )}
+        </div>
+
+        {/* Company Grid */}
+        <p style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Select company</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12, marginBottom: 24 }}>
+          {COMPANIES.map(c => (
+              <button key={c.name} onClick={() => setSelectedCompany(c)} style={{
+                background: selectedCompany?.name === c.name ? 'var(--bg-raised)' : 'var(--bg-surface)',
+                border: `1px solid ${selectedCompany?.name === c.name ? c.color + '88' : 'var(--border)'}`,
+                borderRadius: 10, padding: '14px 16px', cursor: 'pointer', textAlign: 'left',
+                transition: 'border-color 0.15s, background 0.15s', width: '100%'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
+                  <span style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: 14 }}>{c.name}</span>
+                  <span style={{
+                    fontSize: 10, fontWeight: 700, padding: '2px 8px', borderRadius: 99,
+                    color: c.difficulty === 'HIGH' ? '#ef4444' : '#f59e0b',
+                    background: c.difficulty === 'HIGH' ? '#ef444418' : '#f59e0b18',
+                    border: `1px solid ${c.difficulty === 'HIGH' ? '#ef444433' : '#f59e0b33'}`
+                  }}>{c.difficulty}</span>
+                </div>
+                <p style={{ fontSize: 11, color: 'var(--text-muted)' }}>{c.topics}</p>
+                {selectedCompany?.name === c.name && (
+                    <div style={{ marginTop: 8, width: 20, height: 3, borderRadius: 2, background: c.color }} />
+                )}
+              </button>
+          ))}
+        </div>
+
+        {/* Interview Type + Start */}
+        <div className="card" style={{ padding: 20 }}>
+          <p style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Interview type</p>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
+            {INTERVIEW_TYPES.map(t => (
+                <button key={t.value} onClick={() => setInterviewType(t.value)} style={{
+                  background: interviewType === t.value ? 'var(--accent-dim)' : 'var(--bg-raised)',
+                  border: `1px solid ${interviewType === t.value ? 'var(--accent)88' : 'var(--border)'}`,
+                  borderRadius: 8, padding: '10px 16px', cursor: 'pointer', textAlign: 'left',
+                  transition: 'all 0.15s'
+                }}>
+                  <p style={{ fontWeight: 600, fontSize: 13, color: interviewType === t.value ? 'var(--accent)' : 'var(--text-primary)', marginBottom: 2 }}>{t.label}</p>
+                  <p style={{ fontSize: 11, color: 'var(--text-muted)' }}>{t.desc}</p>
+                </button>
+            ))}
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <button className="btn-primary" onClick={handleStart} disabled={starting || !selectedCompany} style={{ padding: '11px 24px', fontSize: 14 }}>
+              {starting ? 'Starting...' : `Start ${selectedCompany ? selectedCompany.name : ''} Interview`}
+            </button>
+            {!selectedCompany && <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>Select a company above to continue</p>}
           </div>
         </div>
-        <button onClick={handleStartInterview} className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg px-5 py-2.5 font-medium">
-          Start Interview →
-        </button>
       </div>
-    </div>
   )
 }
