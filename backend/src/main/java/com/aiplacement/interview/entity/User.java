@@ -1,6 +1,8 @@
 package com.aiplacement.interview.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.Instant;
@@ -16,13 +18,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
+    @Email
     @Column(nullable = false, unique = true)
     private String email;
 
+    @NotBlank
     // BCrypt hash — never store plaintext. Set by AuthService via PasswordEncoder.
     @Column(nullable = false)
     private String passwordHash;
 
+    @NotBlank
     @Column(nullable = false)
     private String fullName;
 

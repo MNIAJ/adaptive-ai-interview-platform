@@ -1,6 +1,7 @@
 package com.aiplacement.interview.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 @Entity
@@ -21,6 +22,7 @@ public class Question {
     @Column(nullable = false, length = 2000)
     private String text;
 
+    @NotBlank
     @Column(nullable = false)
     private String topic; // e.g. "DSA", "System Design", "Leadership Principles"
 
