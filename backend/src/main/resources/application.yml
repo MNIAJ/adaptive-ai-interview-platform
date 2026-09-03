@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/interview_platform
     username: postgres
-    password: ayush1923
+    password: ${DB_PASSWORD:changeme}
   jpa:
     hibernate:
       ddl-auto: update   # fine for a student project; use Flyway/Liquibase migrations for anything real
