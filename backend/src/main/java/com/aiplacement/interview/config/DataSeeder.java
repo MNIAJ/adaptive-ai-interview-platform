@@ -21,7 +21,6 @@ public class DataSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (companyRepository.count() > 0) return; // already seeded — safe to re-run
 
         seedFollowUps();
 
@@ -99,6 +98,10 @@ public class DataSeeder implements CommandLineRunner {
     }
 
     private void seedCompany(String name, String focusAreas, String difficultyProfile, String[][] questions) {
+        if(companyRepository.findByName(name).isPresent()) {
+            return;
+        }
+
         Company company = companyRepository.save(Company.builder()
                 .name(name)
                 .focusAreas(focusAreas)

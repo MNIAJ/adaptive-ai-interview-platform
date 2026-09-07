@@ -33,7 +33,7 @@ public class InterviewService {
         Company company = companyRepository.findByName(request.companyName())
                 .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Unknown company: " + request.companyName()));
 
-        List<Question> bank = questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalse(company.getId());
+        List<Question> bank = questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalseOrderById(company.getId());
         if (bank.isEmpty()) {
             throw new ApiException(HttpStatus.CONFLICT, "No approved questions for " + company.getName() + " yet");
         }
@@ -72,7 +72,7 @@ public class InterviewService {
         Set<Long> askedQuestionIds = responseRepository.findBySessionIdOrderByAnsweredAtAsc(session.getId())
                 .stream().map(r -> r.getQuestion().getId()).collect(Collectors.toSet());
 
-        List<Question> bank = questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalse(session.getCompany().getId());
+        List<Question> bank = questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalseOrderById(session.getCompany().getId());
         var nextBase = bank.stream().filter(q -> !askedQuestionIds.contains(q.getId())).findFirst();
 
         if (nextBase.isEmpty()) {

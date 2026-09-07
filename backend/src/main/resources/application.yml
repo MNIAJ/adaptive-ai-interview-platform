@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/interview_platform
     username: postgres
-    password: ${DB_PASSWORD:changeme}
+    password: ayush1923
   jpa:
     hibernate:
       ddl-auto: update   # fine for a student project; use Flyway/Liquibase migrations for anything real
@@ -30,3 +30,4 @@ app:
     expiration-ms: 86400000  # 24 hours
   ai:
     provider: springai   # mock | openai | springai
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
