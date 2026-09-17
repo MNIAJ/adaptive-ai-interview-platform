@@ -47,8 +47,8 @@ export default function Report() {
                 </div>
             </div>
 
-            {/* Topics */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 24 }}>
+            {/* Topics (unchanged — still the plain per-topic score buckets) */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
                 <div className="card" style={{ padding: 20 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
                         <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--green)' }} />
@@ -73,15 +73,45 @@ export default function Report() {
                 </div>
             </div>
 
-            {/* Recommendation */}
+            {/* NEW: Key strengths / weaknesses — actual observations from the
+                transcript (via ReportInsightService), not just topic names. */}
+            {(report.keyStrengths?.length > 0 || report.keyWeaknesses?.length > 0) && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
+                    <div className="card" style={{ padding: 20 }}>
+                        <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 10 }}>Key strengths</p>
+                        {report.keyStrengths?.length > 0
+                            ? <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.8 }}>
+                                {report.keyStrengths.map((s, i) => <li key={i}>{s}</li>)}
+                              </ul>
+                            : <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>None yet</p>}
+                    </div>
+                    <div className="card" style={{ padding: 20 }}>
+                        <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 10 }}>Key weaknesses</p>
+                        {report.keyWeaknesses?.length > 0
+                            ? <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.8 }}>
+                                {report.keyWeaknesses.map((s, i) => <li key={i}>{s}</li>)}
+                              </ul>
+                            : <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>None — great session!</p>}
+                    </div>
+                </div>
+            )}
+
+            {/* NEW: Study plan */}
+            {report.studyPlan?.length > 0 && (
+                <div className="card" style={{ padding: 20, marginBottom: 20 }}>
+                    <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 10 }}>Study plan</p>
+                    <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.8 }}>
+                        {report.studyPlan.map((s, i) => <li key={i}>{s}</li>)}
+                    </ul>
+                </div>
+            )}
+
+            {/* Recommendation — now real backend-generated text (report.recommendation),
+                not a hardcoded template keyed off the readiness bucket. */}
             <div className="card" style={{ padding: 20, marginBottom: 24, background: 'var(--accent-dim)', borderColor: 'var(--accent)44' }}>
                 <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--accent)', marginBottom: 6 }}>Recommendation</p>
                 <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                    {readiness >= 70
-                        ? `Strong performance. Focus on refining system design and edge cases for ${report.company}'s interview rounds.`
-                        : readiness >= 50
-                            ? `Good foundation. Spend more time on ${report.weakTopics.slice(0,2).join(' and ')} — these came up weak this session.`
-                            : `Need more practice before ${report.company}. Revisit fundamentals in ${report.weakTopics.slice(0,2).join(' and ')} and attempt another session.`}
+                    {report.recommendation}
                 </p>
             </div>
 
