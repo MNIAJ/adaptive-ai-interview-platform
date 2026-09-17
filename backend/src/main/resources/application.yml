@@ -23,6 +23,7 @@ spring:
       chat:
         options:
           model: llama3.2
+          temperature: 0.3
 
 app:
   jwt:

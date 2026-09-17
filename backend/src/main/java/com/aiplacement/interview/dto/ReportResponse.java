@@ -9,5 +9,11 @@ public record ReportResponse(
     double averageScore,
     int readinessPercent,
     List<String> weakTopics,
-    List<String> strongTopics
+    List<String> strongTopics,
+    // New: real per-session analysis, generated from the actual Q&A transcript
+    // instead of a hardcoded template keyed off a readiness bucket.
+    List<String> keyStrengths,
+    List<String> keyWeaknesses,
+    List<String> studyPlan,
+    String recommendation
 ) {}

@@ -25,6 +25,7 @@ public class InterviewService {
     private final ResponseRepository responseRepository;
     private final UserRepository userRepository;
     private final AdaptiveInterviewEngine engine;
+    private final ReportInsightService reportInsightService;
 
     @Transactional
     public InterviewQuestionResponse startInterview(String studentEmail, StartInterviewRequest request) {
@@ -63,12 +64,10 @@ public class InterviewService {
 
         InterviewQuestionResponse engineResult = engine.submitAnswer(session, currentQuestion, request.answerText());
 
-        // If the engine already found a same-topic follow-up, use it as-is.
         if (engineResult.nextQuestionId() != null) {
             return engineResult;
         }
 
-        // Otherwise: pick the next not-yet-asked BASE question for this company.
         Set<Long> askedQuestionIds = responseRepository.findBySessionIdOrderByAnsweredAtAsc(session.getId())
                 .stream().map(r -> r.getQuestion().getId()).collect(Collectors.toSet());
 
@@ -100,20 +99,32 @@ public class InterviewService {
 
         List<Response> responses = responseRepository.findBySessionIdOrderByAnsweredAtAsc(sessionId);
         double avg = responses.stream().mapToInt(Response::getScore).average().orElse(0);
+        int readiness = (int) (avg / 10.0 * 100);
 
         Set<String> weak = responses.stream().filter(r -> r.getScore() < 6)
                 .map(r -> r.getQuestion().getTopic()).collect(Collectors.toCollection(java.util.LinkedHashSet::new));
         Set<String> strong = responses.stream().filter(r -> r.getScore() >= 6)
                 .map(r -> r.getQuestion().getTopic()).collect(Collectors.toCollection(java.util.LinkedHashSet::new));
 
+        List<ReportInsightService.QAResult> transcript = responses.stream()
+                .map(r -> new ReportInsightService.QAResult(
+                        r.getQuestion().getTopic(), r.getQuestion().getText(), r.getScore(), r.isWasFollowUp()))
+                .toList();
+        ReportInsightService.Insights insights = reportInsightService.generate(
+                session.getCompany().getName(), avg, readiness, transcript);
+
         return new ReportResponse(
                 session.getId(),
                 session.getCompany().getName(),
                 responses.size(),
                 Math.round(avg * 10) / 10.0,
-                (int) (avg / 10.0 * 100),
+                readiness,
                 weak.stream().toList(),
-                strong.stream().toList()
+                strong.stream().toList(),
+                insights.strengths(),
+                insights.weaknesses(),
+                insights.studyPlan(),
+                insights.recommendation()
         );
     }
 }
