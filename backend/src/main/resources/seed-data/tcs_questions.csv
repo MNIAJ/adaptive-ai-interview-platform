@@ -1,0 +1,73 @@
+company|topic|difficulty|text
+TCS Ninja|CS Fundamentals|1|What is the difference between a compiler and an interpreter?
+TCS Ninja|CS Fundamentals|1|What is an operating system and what are its main functions?
+TCS Ninja|CS Fundamentals|2|Explain the difference between RAM and ROM.
+TCS Ninja|CS Fundamentals|1|What is the difference between a process and a program?
+TCS Ninja|DBMS|1|What is a database? Name two examples of database management systems.
+TCS Ninja|DBMS|2|What is a primary key? Can a table have more than one candidate key?
+TCS Ninja|DBMS|2|What is the difference between DELETE and TRUNCATE in SQL?
+TCS Ninja|DBMS|1|What is a foreign key used for?
+TCS Ninja|OOP|1|What is a class and what is an object? Give a simple example.
+TCS Ninja|OOP|2|What is inheritance in Java? Give one real-world example.
+TCS Ninja|OOP|1|What is encapsulation and why is it useful?
+TCS Ninja|OOP|2|What is the difference between a constructor and a method?
+TCS Ninja|Communication|1|Tell me about yourself.
+TCS Ninja|Communication|1|Why do you want to join TCS?
+TCS Ninja|Communication|2|Describe a situation where you worked in a team to complete a task.
+TCS Ninja|Communication|1|What are your strengths and weaknesses?
+TCS Ninja|Aptitude Reasoning|1|If a train travels 60 km in 45 minutes, what is its speed in km/hr?
+TCS Ninja|Aptitude Reasoning|2|A can complete a work in 10 days and B in 15 days. How many days will they take working together?
+TCS Ninja|Aptitude Reasoning|1|Find the next number in the series: 2, 6, 12, 20, 30, ?
+TCS Ninja|Aptitude Reasoning|2|If the price of an item increases by 20 percent and then decreases by 20 percent, what is the net change?
+TCS Ninja|CS Fundamentals|2|What is the difference between a stack and a queue?
+TCS Ninja|DBMS|2|What is normalization? Why is it needed?
+TCS Ninja|OOP|2|What is method overloading? Give an example.
+TCS Ninja|Communication|2|How do you handle criticism from a senior or manager?
+TCS Digital|DSA|3|What is the time complexity of binary search and why does it work only on sorted data?
+TCS Digital|DSA|3|Explain the difference between an array and a linked list, with trade-offs.
+TCS Digital|DSA_CODING|3|Write a function to reverse a linked list iteratively.
+TCS Digital|DSA_CODING|4|Given an array of integers, find two numbers that add up to a given target. Explain your approach and complexity.
+TCS Digital|DSA_CODING|4|Find the first non-repeating character in a string.
+TCS Digital|DSA|3|What is a hash map and how does it handle collisions?
+TCS Digital|SQL|3|Write a query to find the second highest salary from an Employee table.
+TCS Digital|SQL|2|What is the difference between INNER JOIN and LEFT JOIN? Give an example.
+TCS Digital|SQL|3|Write a query to find duplicate rows in a table.
+TCS Digital|SQL|2|What is a GROUP BY clause used for? Give an example with HAVING.
+TCS Digital|OOP|3|Explain the four pillars of Object-Oriented Programming with a real example.
+TCS Digital|OOP|3|What is the difference between an abstract class and an interface in Java?
+TCS Digital|OOP|2|What is polymorphism? Explain with a code example.
+TCS Digital|DBMS|2|What are ACID properties in a database transaction?
+TCS Digital|DBMS|3|Explain 1NF, 2NF and 3NF with a simple example.
+TCS Digital|DBMS|2|What is indexing and how does it improve query performance?
+TCS Digital|CS Fundamentals|2|What is the difference between TCP and UDP?
+TCS Digital|CS Fundamentals|3|What happens when you type a URL into a browser and press enter?
+TCS Digital|System Design|4|How would you design a URL shortener like bit.ly?
+TCS Digital|System Design|3|How would you design a simple rate limiter for an API?
+TCS Digital|DSA_CODING|3|Check if a given string is a palindrome without using extra space.
+TCS Digital|DSA|3|What is the difference between BFS and DFS, and when would you use each?
+TCS Digital|SQL|3|Write a query to find employees who earn more than their manager.
+TCS Digital|OOP|3|What is method overriding vs method overloading? Give a Java example of each.
+TCS Prime|DSA|2|What is the time complexity of linear search vs binary search?
+TCS Prime|DSA|3|Explain how a stack can be used to check for balanced parentheses in an expression.
+TCS Prime|DSA_CODING|3|Write a function to find the factorial of a number using recursion.
+TCS Prime|DSA_CODING|3|Find the maximum subarray sum in an array of integers (Kadane's algorithm).
+TCS Prime|SQL|2|What is the difference between WHERE and HAVING clauses?
+TCS Prime|SQL|3|Write a query to find the total salary paid per department.
+TCS Prime|SQL|2|What is a subquery? Give a simple example.
+TCS Prime|OOP|2|What is abstraction and how is it different from encapsulation?
+TCS Prime|OOP|3|Explain the SOLID principles with one example each.
+TCS Prime|DBMS|2|What is a JOIN in SQL? Explain the different types.
+TCS Prime|DBMS|3|What is denormalization and when would you use it?
+TCS Prime|CS Fundamentals|2|What is the difference between a compiler, an interpreter, and a JIT compiler?
+TCS Prime|CS Fundamentals|2|Explain the concept of multithreading in simple terms.
+TCS Prime|Aptitude Reasoning|2|How would you prioritize tasks when everything seems urgent?
+TCS Prime|Aptitude Reasoning|2|If a project deadline is at risk, how would you communicate that to your manager?
+TCS Prime|DSA|3|What is a binary search tree, and how does insertion work?
+TCS Prime|DSA_CODING|3|Write a function to check if two strings are anagrams of each other.
+TCS Prime|SQL|3|Write a query to find the Nth highest salary using a subquery.
+TCS Prime|OOP|2|What is the difference between method overloading and constructor overloading?
+TCS Prime|DBMS|2|What is a composite key? Give an example.
+TCS Prime|CS Fundamentals|3|Explain how garbage collection works in Java at a high level.
+TCS Prime|Aptitude Reasoning|2|Tell me about a time you had to learn something new quickly under pressure.
+TCS Prime|DSA|2|What is the difference between a singly linked list and a doubly linked list?
+TCS Prime|SQL|2|What does the DISTINCT keyword do in SQL? Give an example.
