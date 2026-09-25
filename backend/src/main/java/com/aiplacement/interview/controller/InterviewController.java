@@ -4,9 +4,10 @@ import com.aiplacement.interview.dto.*;
 import com.aiplacement.interview.service.InterviewService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/interview")
@@ -15,9 +16,6 @@ public class InterviewController {
 
     private final InterviewService interviewService;
 
-    // JwtAuthFilter puts the authenticated user's email as the principal
-    // (see JwtAuthFilter.java) — this is how every protected endpoint knows
-    // "who is calling", without ever trusting a client-supplied user id.
     private String currentEmail() {
         return (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
@@ -35,5 +33,11 @@ public class InterviewController {
     @GetMapping("/report/{sessionId}")
     public ReportResponse report(@PathVariable Long sessionId) {
         return interviewService.generateReport(currentEmail(), sessionId);
+    }
+
+    // NEW — past interviews list, newest first.
+    @GetMapping("/history")
+    public List<SessionSummaryResponse> history() {
+        return interviewService.getHistory(currentEmail());
     }
 }
