@@ -24,6 +24,11 @@ export default function Layout({ children }) {
                 color: location.pathname === '/' ? 'var(--text-primary)' : 'var(--text-secondary)',
                 background: location.pathname === '/' ? 'var(--bg-raised)' : 'transparent'
               }}>Dashboard</Link>
+              <Link to="/history" style={{
+                padding: '6px 12px', borderRadius: 6, fontSize: 13, textDecoration: 'none',
+                color: location.pathname === '/history' ? 'var(--text-primary)' : 'var(--text-secondary)',
+                background: location.pathname === '/history' ? 'var(--bg-raised)' : 'transparent'
+              }}>History</Link>
               <button onClick={() => { localStorage.removeItem('token'); navigate('/login') }}
                       style={{ padding: '6px 12px', borderRadius: 6, fontSize: 13, background: 'transparent', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>
                 Sign out
