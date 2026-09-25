@@ -1,16 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from '../api/axios.js'
 
 const COMPANIES = [
-  { name: 'Amazon',    difficulty: 'HIGH',   color: '#ff9900', topics: 'DSA · Leadership · System Design' },
-  { name: 'Microsoft', difficulty: 'HIGH',   color: '#00a1f1', topics: 'OOP · DSA · Problem Solving' },
-  { name: 'Google',    difficulty: 'HIGH',   color: '#34a853', topics: 'DSA · System Design · Problem Solving' },
-  { name: 'TCS Digital', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DBMS · OOP · Problem Solving' },
-  { name: 'Infosys',   difficulty: 'MEDIUM', color: '#007cc3', topics: 'CS Fundamentals · Communication · DBMS' },
+  { name: 'Amazon', difficulty: 'HIGH', color: '#ff9900', topics: 'DSA · Leadership · System Design' },
+  { name: 'Microsoft', difficulty: 'HIGH', color: '#00a1f1', topics: 'OOP · DSA · Problem Solving' },
+  { name: 'Google', difficulty: 'HIGH', color: '#34a853', topics: 'DSA · System Design · Problem Solving' },
+
+  { name: 'TCS Ninja', difficulty: 'LOW', color: '#6c63ff', topics: 'CS Fundamentals · DBMS · OOP · Communication' },
+  { name: 'TCS Digital', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DSA · SQL · OOP · DBMS · System Design' },
+  { name: 'TCS Prime', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DSA · SQL · OOP · DBMS · Aptitude Reasoning' },
+
+  { name: 'Infosys', difficulty: 'MEDIUM', color: '#007cc3', topics: 'CS Fundamentals · Communication · DBMS' },
   { name: 'Accenture', difficulty: 'MEDIUM', color: '#a100ff', topics: 'Communication · OOP · Reasoning' },
   { name: 'Capgemini', difficulty: 'MEDIUM', color: '#0070ad', topics: 'Communication · DSA · DBMS' },
-  { name: 'Deloitte',  difficulty: 'MEDIUM', color: '#86bc25', topics: 'Communication · Reasoning · CS Fundamentals' },
+  { name: 'Deloitte', difficulty: 'MEDIUM', color: '#86bc25', topics: 'Communication · Reasoning · CS Fundamentals' },
 ]
 
 const INTERVIEW_TYPES = [
@@ -20,15 +24,30 @@ const INTERVIEW_TYPES = [
   { value: 'CORE_CS',    label: 'Core CS',     desc: 'OS, Networks, DBMS, OOP' },
 ]
 
+const QUESTION_COUNTS = [5, 7, 10, 15]
+
 export default function Dashboard() {
   const [selectedCompany, setSelectedCompany] = useState(null)
   const [interviewType, setInterviewType] = useState('TECHNICAL')
+  const [totalQuestions, setTotalQuestions] = useState(7)
   const [resumeFile, setResumeFile] = useState(null)
   const [resumeResult, setResumeResult] = useState(null)
+  const [resumeLoading, setResumeLoading] = useState(true)
   const [uploading, setUploading] = useState(false)
   const [starting, setStarting] = useState(false)
   const [error, setError] = useState('')
   const navigate = useNavigate()
+
+  useEffect(() => {
+    let cancelled = false
+    api.get('/resume/me')
+        .then(res => {
+          if (!cancelled && res.status === 200 && res.data) setResumeResult(res.data)
+        })
+        .catch(() => { /* no resume yet, or fetch failed — leave the upload prompt showing */ })
+        .finally(() => { if (!cancelled) setResumeLoading(false) })
+    return () => { cancelled = true }
+  }, [])
 
   async function handleUpload(e) {
     e.preventDefault()
@@ -47,7 +66,7 @@ export default function Dashboard() {
     if (!selectedCompany) { setError('Select a company first'); return }
     setStarting(true); setError('')
     try {
-      const res = await api.post('/interview/start', { companyName: selectedCompany.name, interviewType })
+      const res = await api.post('/interview/start', { companyName: selectedCompany.name, interviewType, totalQuestions })
       sessionStorage.setItem('currentQuestion', JSON.stringify(res.data))
       navigate(`/interview/${res.data.sessionId}`)
     } catch (err) { setError(err.response?.data?.error || 'Could not start interview') }
@@ -73,7 +92,9 @@ export default function Dashboard() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
             <div>
               <p style={{ fontWeight: 500, color: 'var(--text-primary)', marginBottom: 2 }}>Resume Analysis</p>
-              <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>Upload your PDF to auto-detect skills and personalise questions</p>
+              <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
+                {resumeResult ? 'Re-upload to replace your saved resume analysis' : 'Upload your PDF to auto-detect skills and personalise questions'}
+              </p>
             </div>
             <form onSubmit={handleUpload} style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
               <label style={{
@@ -90,6 +111,9 @@ export default function Dashboard() {
               )}
             </form>
           </div>
+          {resumeLoading && (
+              <p style={{ marginTop: 14, fontSize: 12, color: 'var(--text-muted)' }}>Checking for a saved resume...</p>
+          )}
           {resumeResult && (
               <div style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid var(--border)' }}>
                 <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>Skills detected from your resume:</p>
@@ -130,7 +154,7 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* Interview Type + Start */}
+        {/* Interview Type + Question Count + Start */}
         <div className="card" style={{ padding: 20 }}>
           <p style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Interview type</p>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
@@ -146,6 +170,22 @@ export default function Dashboard() {
                 </button>
             ))}
           </div>
+
+          <p style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Number of questions</p>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
+            {QUESTION_COUNTS.map(n => (
+                <button key={n} onClick={() => setTotalQuestions(n)} style={{
+                  background: totalQuestions === n ? 'var(--accent-dim)' : 'var(--bg-raised)',
+                  border: `1px solid ${totalQuestions === n ? 'var(--accent)88' : 'var(--border)'}`,
+                  borderRadius: 8, padding: '10px 18px', cursor: 'pointer',
+                  fontWeight: 600, fontSize: 13, color: totalQuestions === n ? 'var(--accent)' : 'var(--text-primary)',
+                  transition: 'all 0.15s'
+                }}>
+                  {n}
+                </button>
+            ))}
+          </div>
+
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <button className="btn-primary" onClick={handleStart} disabled={starting || !selectedCompany} style={{ padding: '11px 24px', fontSize: 14 }}>
               {starting ? 'Starting...' : `Start ${selectedCompany ? selectedCompany.name : ''} Interview`}
