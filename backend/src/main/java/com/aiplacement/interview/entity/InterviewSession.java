@@ -32,6 +32,9 @@ public class InterviewSession {
     @Builder.Default
     private int currentDifficulty = 3;
 
+    @Builder.Default
+    private int maxQuestions = 7; // default keeps old behavior if not set
+
     @Enumerated(EnumType.STRING)
     @Builder.Default
     private SessionStatus status = SessionStatus.IN_PROGRESS;
