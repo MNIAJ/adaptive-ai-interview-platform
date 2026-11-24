@@ -25,6 +25,7 @@ public class InterviewService {
     private final QuestionRepository questionRepository;
     private final ResponseRepository responseRepository;
     private final UserRepository userRepository;
+    private final ResumeRepository resumeRepository;
     private final AdaptiveInterviewEngine engine;
     private final ReportInsightService reportInsightService;
 
@@ -35,12 +36,16 @@ public class InterviewService {
         Company company = companyRepository.findByName(request.companyName())
                 .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Unknown company: " + request.companyName()));
 
-        List<Question> bank = fetchBankForType(company.getId(), request.interviewType());
+        String type = request.interviewType().trim().toUpperCase(java.util.Locale.ROOT);
+        if (type.equals("CAMPUS_SIMULATION")) type = "SIMULATION";
+        try { InterviewSession.InterviewType.valueOf(type); } catch (IllegalArgumentException ex) { throw new ApiException(HttpStatus.BAD_REQUEST, "Unknown interview mode"); }
+        List<Question> bank = fetchBankForType(company.getId(), type);
         if (bank.isEmpty()) {
             throw new ApiException(HttpStatus.CONFLICT, "No approved questions for " + company.getName() + " yet");
         }
         InterviewSession session = InterviewSession.builder().student(student).company(company)
-                .type(InterviewSession.InterviewType.valueOf(request.interviewType()))
+                .type(InterviewSession.InterviewType.valueOf(type))
+                .currentDifficulty(company.getName().equals("TCS Ninja") ? 2 : (company.getName().equals("TCS Prime") || company.getName().equals("AlgoQuant")) ? 4 : 3)
                 .maxQuestions(Math.min(request.totalQuestions(),bank.size())).build();
         sessionRepository.save(session);
         return issue(session, choose(session, bank, List.of()), null);
@@ -50,13 +55,15 @@ public class InterviewService {
         return questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalseOrderById(companyId).stream()
             .filter(q -> q.getStage()!=null).filter(q -> switch(type) {
                 case "HR", "BEHAVIORAL" -> q.getStage().equals("HR") || q.getStage().equals("MANAGERIAL");
-                case "TECHNICAL", "CORE_CS", "CODING" -> q.getStage().equals("TECHNICAL");
+                case "CODING" -> q.getStage().equals("TECHNICAL") && q.getTopic().equals("DSA");
+                case "CORE_CS" -> q.getStage().equals("TECHNICAL") && Set.of("OS","DBMS","SQL","OOP","Networks","CS Fundamentals").contains(q.getTopic());
+                case "TECHNICAL" -> q.getStage().equals("TECHNICAL");
                 default -> true;
             }).toList();
     }
     private Question choose(InterviewSession s, List<Question> bank, List<Response> history) {
         Set<Long> used=history.stream().map(r->r.getQuestion().getId()).collect(Collectors.toSet());
-        List<Question> remaining=bank.stream().filter(q->!used.contains(q.getId())).toList();
+        List<Question> remaining=bank.stream().filter(q->!used.contains(q.getId()) && history.stream().noneMatch(r->r.getQuestion().getText().equals(q.getText()))).toList();
         if(remaining.isEmpty()) return null;
         String stage="TECHNICAL";
         if(s.getType()==InterviewSession.InterviewType.SIMULATION){
@@ -65,18 +72,33 @@ public class InterviewService {
             stage=n==0?"INTRO":n==1&&max>=5?"PROJECT":n>=max-1?"HR":tcsPanel&&max>=7&&n==max-2?"MANAGERIAL":"TECHNICAL";
         } else if(s.getType()==InterviewSession.InterviewType.HR || s.getType()==InterviewSession.InterviewType.BEHAVIORAL) stage="HR";
         final String target=stage;
+        if ("PROJECT".equals(target)) {
+            var resume = resumeRepository.findByStudentId(s.getStudent().getId());
+            if (resume.isPresent() && resume.get().getSkillsCsv()!=null) {
+                String skill = java.util.Arrays.stream(resume.get().getSkillsCsv().split(","))
+                    .map(String::trim).filter(x->x.matches("[a-zA-Z0-9 +.#-]{1,40}")).findFirst().orElse("");
+                if (!skill.isBlank()) {
+                    String text = "Your resume lists " + skill + ". Describe a project or exercise where you used it, your contribution, and one technical decision you made. If you have not used it in a project, explain what you have learned so far.";
+                    Question q = Question.builder().company(s.getCompany()).stage("PROJECT").topic("Projects").text(text).baseDifficulty(3).origin("V3_PERSONALIZED").approved(false).rubric("Concrete experience, ownership, technical decision and honest limitations.").build();
+                    return questionRepository.save(q);
+                }
+            }
+        }
         var candidates=new java.util.ArrayList<>(remaining.stream().filter(q->target.equals(q.getStage())).toList());
         if(candidates.isEmpty()) candidates.addAll(remaining.stream().filter(q->!q.getStage().equals("INTRO")&&!q.getStage().equals("PROJECT")).toList());
         if(candidates.isEmpty()) candidates.addAll(remaining);
         Collections.shuffle(candidates);
+        String skills = resumeRepository.findByStudentId(s.getStudent().getId()).map(Resume::getSkillsCsv).orElse("");
+        Set<String> skillSet = new java.util.HashSet<>(java.util.Arrays.asList(skills.toLowerCase(java.util.Locale.ROOT).split(",")));
         return candidates.stream().min(java.util.Comparator.comparingInt((Question q)->Math.abs(q.getBaseDifficulty()-s.getCurrentDifficulty()))
-            .thenComparingLong(q->history.stream().filter(r->r.getQuestion().getTopic().equals(q.getTopic())).count())).orElse(null);
+            .thenComparingLong(q->history.stream().filter(r->r.getQuestion().getTopic().equals(q.getTopic())).count())
+            .thenComparingInt(q->skillSet.contains(q.getTopic().toLowerCase(java.util.Locale.ROOT)) ? 0 : 1)).orElse(null);
     }
     private InterviewQuestionResponse issue(InterviewSession s, Question q, InterviewQuestionResponse previous){
         s.setCurrentQuestionId(q==null?null:q.getId());
         if(q==null){s.setStatus(InterviewSession.SessionStatus.COMPLETED);s.setEndedAt(Instant.now());}
         sessionRepository.save(s);
-        return new InterviewQuestionResponse(s.getId(),q==null,previous==null?null:previous.lastScore(),previous==null?null:previous.lastFeedback(),previous==null?null:previous.wasFollowUp(),s.getCurrentDifficulty(),q==null?null:q.getId(),q==null?null:q.getText(),q==null?null:q.getTopic(),q==null?null:q.getStage(),q==null?null:q.getOrigin(),q==null?null:q.getSourceUrl());
+        return new InterviewQuestionResponse(s.getId(),q==null,previous==null||s.getType()==InterviewSession.InterviewType.SIMULATION?null:previous.lastScore(),previous==null||s.getType()==InterviewSession.InterviewType.SIMULATION?null:previous.lastFeedback(),previous==null?null:previous.wasFollowUp(),s.getCurrentDifficulty(),q==null?null:q.getId(),q==null?null:q.getText(),q==null?null:q.getTopic(),q==null?null:q.getStage(),q==null?null:q.getOrigin(),q==null?null:q.getSourceUrl());
     }
     @Transactional
     public InterviewQuestionResponse submitAnswer(String studentEmail, AnswerRequest request) {
@@ -88,12 +110,42 @@ public class InterviewService {
         List<Response> history=responseRepository.findBySessionIdOrderByAnsweredAtAsc(s.getId());
         if(history.size()>=s.getMaxQuestions()) return issue(s,null,result);
         if(result.lastScore()<6 && !current.isFollowUp() && "TECHNICAL".equals(current.getStage()) && history.size()<s.getMaxQuestions()-(s.getType()==InterviewSession.InterviewType.SIMULATION && s.getCompany().getName().startsWith("TCS") ? 2 : 1) && history.stream().noneMatch(r->r.isWasFollowUp()&&r.getQuestion().getTopic().equals(current.getTopic()))){
-            var follow=questionRepository.findByCompanyIdAndApprovedTrue(s.getCompany().getId()).stream().filter(q->q.isFollowUp()&&q.getTopic().equals(current.getTopic())&&"TECHNICAL".equals(q.getStage())).findFirst();
-            if(follow.isPresent()) return issue(s,follow.get(),result);
+            var follow=questionRepository.findByCompanyIdAndApprovedTrue(s.getCompany().getId()).stream().filter(q->q.getTopic().equals(current.getTopic())&&"TECHNICAL".equals(q.getStage())&&history.stream().noneMatch(r->r.getQuestion().getText().equals(q.getText()))).findFirst();
+            if(follow.isPresent()) {
+                Question base=follow.get();
+                Question probe=Question.builder().company(s.getCompany()).stage(base.getStage()).topic(base.getTopic()).text(base.getText()).rubric(base.getRubric()).baseDifficulty(base.getBaseDifficulty()).isFollowUp(true).approved(false).origin("V3_PERSONALIZED").build();
+                return issue(s,questionRepository.save(probe),result);
+            }
         }
         return issue(s,choose(s,fetchBankForType(s.getCompany().getId(),s.getType().name()),history),result);
     }
 
+    private InterviewSession owned(String email, Long id) {
+        InterviewSession s=sessionRepository.lockById(id).orElseThrow(()->new ApiException(HttpStatus.NOT_FOUND,"Session not found"));
+        if(!s.getStudent().getEmail().equals(email)) throw new ApiException(HttpStatus.FORBIDDEN,"This session does not belong to you");
+        return s;
+    }
+    @Transactional
+    public java.util.Map<String,Object> resumeSession(String email, Long id) {
+        InterviewSession s=owned(email,id);
+        var result=new java.util.LinkedHashMap<String,Object>();
+        result.put("status",s.getStatus().name()); result.put("mode",s.getType().name());
+        result.put("startedAt",s.getStartedAt()); result.put("maxQuestions",s.getMaxQuestions());
+        result.put("questionNumber",responseRepository.findBySessionIdOrderByAnsweredAtAsc(id).size()+1);
+        if(s.getStatus()==InterviewSession.SessionStatus.IN_PROGRESS && s.getCurrentQuestionId()!=null) {
+            Question q=questionRepository.findById(s.getCurrentQuestionId()).orElseThrow(()->new ApiException(HttpStatus.CONFLICT,"Question unavailable"));
+            result.put("question",new InterviewQuestionResponse(id,false,null,null,null,s.getCurrentDifficulty(),q.getId(),q.getText(),q.getTopic(),q.getStage(),q.getOrigin(),q.getSourceUrl()));
+        }
+        return result;
+    }
+    @Transactional
+    public void endSession(String email, Long id) {
+        InterviewSession s=owned(email,id);
+        if(s.getStatus()==InterviewSession.SessionStatus.IN_PROGRESS) {
+            s.setStatus(InterviewSession.SessionStatus.COMPLETED); s.setEndedAt(Instant.now()); s.setCurrentQuestionId(null);
+            sessionRepository.save(s);
+        }
+    }
     @Transactional(readOnly = true)
     public ReportResponse generateReport(String studentEmail, Long sessionId) {
         InterviewSession session = sessionRepository.findById(sessionId)
@@ -103,13 +155,12 @@ public class InterviewService {
         }
 
         List<Response> responses = responseRepository.findBySessionIdOrderByAnsweredAtAsc(sessionId);
+        if(session.getStatus()==InterviewSession.SessionStatus.IN_PROGRESS) throw new ApiException(HttpStatus.CONFLICT,"Finish the interview before viewing its report");
         double avg = responses.stream().mapToInt(Response::getScore).average().orElse(0);
         int readiness = (int) (avg / 10.0 * 100);
 
-        Set<String> weak = responses.stream().filter(r -> r.getScore() < 6)
-                .map(r -> r.getQuestion().getTopic()).collect(Collectors.toCollection(java.util.LinkedHashSet::new));
-        Set<String> strong = responses.stream().filter(r -> r.getScore() >= 6)
-                .map(r -> r.getQuestion().getTopic()).collect(Collectors.toCollection(java.util.LinkedHashSet::new));
+        Set<String> weak = responses.stream().collect(Collectors.groupingBy(r->r.getQuestion().getTopic(),Collectors.averagingInt(Response::getScore))).entrySet().stream().filter(e->e.getValue()<6).map(java.util.Map.Entry::getKey).collect(Collectors.toCollection(java.util.LinkedHashSet::new));
+        Set<String> strong = responses.stream().collect(Collectors.groupingBy(r->r.getQuestion().getTopic(),Collectors.averagingInt(Response::getScore))).entrySet().stream().filter(e->e.getValue()>=6).map(java.util.Map.Entry::getKey).collect(Collectors.toCollection(java.util.LinkedHashSet::new));
 
         List<ReportInsightService.QAResult> transcript = responses.stream()
                 .map(r -> new ReportInsightService.QAResult(
@@ -130,7 +181,10 @@ public class InterviewService {
                 insights.weaknesses(),
                 insights.studyPlan(),
                 insights.recommendation(),
-                responses.stream().collect(Collectors.groupingBy(r -> r.getQuestion().getStage()==null?"LEGACY":r.getQuestion().getStage(), Collectors.averagingInt(Response::getScore)))
+                responses.stream().collect(Collectors.groupingBy(r -> r.getQuestion().getStage()==null?"LEGACY":r.getQuestion().getStage(), Collectors.averagingInt(Response::getScore))),
+                responses.stream().collect(Collectors.groupingBy(r -> r.getQuestion().getTopic(), Collectors.averagingInt(Response::getScore))),
+                responses.stream().map(r->new ReportResponse.AnswerDetail(r.getQuestion().getText(),r.getAnswerText(),r.getScore(),r.getAiFeedback(),r.getQuestion().getRubric())).toList(),
+                session.getEndedAt()==null?0:Math.max(0,java.time.Duration.between(session.getStartedAt(),session.getEndedAt()).toSeconds())
         );
     }
 

@@ -30,6 +30,14 @@ public class InterviewController {
         return interviewService.submitAnswer(currentEmail(), request);
     }
 
+    @GetMapping("/session/{sessionId}")
+    public java.util.Map<String,Object> resume(@PathVariable Long sessionId) {
+        return interviewService.resumeSession(currentEmail(), sessionId);
+    }
+    @PostMapping("/end/{sessionId}")
+    public void end(@PathVariable Long sessionId) {
+        interviewService.endSession(currentEmail(), sessionId);
+    }
     @GetMapping("/report/{sessionId}")
     public ReportResponse report(@PathVariable Long sessionId) {
         return interviewService.generateReport(currentEmail(), sessionId);

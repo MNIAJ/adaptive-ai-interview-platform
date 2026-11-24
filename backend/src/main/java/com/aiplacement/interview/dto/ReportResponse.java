@@ -15,5 +15,5 @@ public record ReportResponse(
     List<String> keyStrengths,
     List<String> keyWeaknesses,
     List<String> studyPlan,
-    String recommendation, java.util.Map<String, Double> stageScores
-) {}
+    String recommendation, java.util.Map<String, Double> stageScores, java.util.Map<String, Double> topicScores, List<AnswerDetail> answers, long durationSeconds
+) { public record AnswerDetail(String question,String answer,int score,String feedback,String rubric) {} }
