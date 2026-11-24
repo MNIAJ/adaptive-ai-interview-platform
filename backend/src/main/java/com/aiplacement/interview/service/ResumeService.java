@@ -61,9 +61,10 @@ public class ResumeService {
         resume.setExtractedText(text.length() > 20000 ? text.substring(0, 20000) : text);
         resume.setSkillsCsv(String.join(",", foundSkills));
         resume.setProjectsSummary(projectsSummary.length() > 2000 ? projectsSummary.substring(0, 2000) : projectsSummary);
+        resume.setUploadedAt(java.time.Instant.now());
         resumeRepository.save(resume);
 
-        return new ResumeUploadResponse(foundSkills, projectsSummary);
+        return new ResumeUploadResponse(foundSkills, resume.getProjectsSummary(), resume.getUploadedAt());
     }
 
     // NEW — lets the frontend re-fetch a previously uploaded resume on page
@@ -80,7 +81,7 @@ public class ResumeService {
                     List<String> skills = resume.getSkillsCsv() == null || resume.getSkillsCsv().isBlank()
                             ? List.of()
                             : List.of(resume.getSkillsCsv().split(","));
-                    return new ResumeUploadResponse(skills, resume.getProjectsSummary());
+                    return new ResumeUploadResponse(skills, resume.getProjectsSummary(), resume.getUploadedAt());
                 });
     }
 }
