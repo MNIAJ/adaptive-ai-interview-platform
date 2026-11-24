@@ -39,69 +39,59 @@ public class InterviewService {
         if (bank.isEmpty()) {
             throw new ApiException(HttpStatus.CONFLICT, "No approved questions for " + company.getName() + " yet");
         }
-        Collections.shuffle(bank);
-
-        InterviewSession session = InterviewSession.builder()
-                .student(student)
-                .company(company)
+        InterviewSession session = InterviewSession.builder().student(student).company(company)
                 .type(InterviewSession.InterviewType.valueOf(request.interviewType()))
-                .maxQuestions(request.totalQuestions())
-                .build();
+                .maxQuestions(Math.min(request.totalQuestions(),bank.size())).build();
         sessionRepository.save(session);
-
-        Question first = bank.get(0);
-        return new InterviewQuestionResponse(session.getId(), false, null, null, null,
-                session.getCurrentDifficulty(), first.getId(), first.getText(), first.getTopic());
+        return issue(session, choose(session, bank, List.of()), null);
     }
 
-    private List<Question> fetchBankForType(Long companyId, String interviewType) {
-        return switch (interviewType) {
-            case "TECHNICAL", "CODING" -> questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalseAndTopicIn(
-                    companyId, List.of("DSA", "DSA_CODING", "SQL", "System Design", "OOP", "CS Fundamentals", "DBMS"));
-            case "HR", "BEHAVIORAL" -> questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalseAndTopicIn(
-                    companyId, List.of("Communication", "Leadership Principles", "Aptitude Reasoning", "Problem Solving"));
-            default -> questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalseOrderById(companyId);
-        };
+    private List<Question> fetchBankForType(Long companyId, String type) {
+        return questionRepository.findByCompanyIdAndApprovedTrueAndIsFollowUpFalseOrderById(companyId).stream()
+            .filter(q -> q.getStage()!=null).filter(q -> switch(type) {
+                case "HR", "BEHAVIORAL" -> q.getStage().equals("HR") || q.getStage().equals("MANAGERIAL");
+                case "TECHNICAL", "CORE_CS", "CODING" -> q.getStage().equals("TECHNICAL");
+                default -> true;
+            }).toList();
     }
-
+    private Question choose(InterviewSession s, List<Question> bank, List<Response> history) {
+        Set<Long> used=history.stream().map(r->r.getQuestion().getId()).collect(Collectors.toSet());
+        List<Question> remaining=bank.stream().filter(q->!used.contains(q.getId())).toList();
+        if(remaining.isEmpty()) return null;
+        String stage="TECHNICAL";
+        if(s.getType()==InterviewSession.InterviewType.SIMULATION){
+            int n=history.size(), max=s.getMaxQuestions();
+            boolean tcsPanel=s.getCompany().getName().startsWith("TCS") && bank.stream().anyMatch(q->"MANAGERIAL".equals(q.getStage()));
+            stage=n==0?"INTRO":n==1&&max>=5?"PROJECT":n>=max-1?"HR":tcsPanel&&max>=7&&n==max-2?"MANAGERIAL":"TECHNICAL";
+        } else if(s.getType()==InterviewSession.InterviewType.HR || s.getType()==InterviewSession.InterviewType.BEHAVIORAL) stage="HR";
+        final String target=stage;
+        var candidates=new java.util.ArrayList<>(remaining.stream().filter(q->target.equals(q.getStage())).toList());
+        if(candidates.isEmpty()) candidates.addAll(remaining.stream().filter(q->!q.getStage().equals("INTRO")&&!q.getStage().equals("PROJECT")).toList());
+        if(candidates.isEmpty()) candidates.addAll(remaining);
+        Collections.shuffle(candidates);
+        return candidates.stream().min(java.util.Comparator.comparingInt((Question q)->Math.abs(q.getBaseDifficulty()-s.getCurrentDifficulty()))
+            .thenComparingLong(q->history.stream().filter(r->r.getQuestion().getTopic().equals(q.getTopic())).count())).orElse(null);
+    }
+    private InterviewQuestionResponse issue(InterviewSession s, Question q, InterviewQuestionResponse previous){
+        s.setCurrentQuestionId(q==null?null:q.getId());
+        if(q==null){s.setStatus(InterviewSession.SessionStatus.COMPLETED);s.setEndedAt(Instant.now());}
+        sessionRepository.save(s);
+        return new InterviewQuestionResponse(s.getId(),q==null,previous==null?null:previous.lastScore(),previous==null?null:previous.lastFeedback(),previous==null?null:previous.wasFollowUp(),s.getCurrentDifficulty(),q==null?null:q.getId(),q==null?null:q.getText(),q==null?null:q.getTopic(),q==null?null:q.getStage(),q==null?null:q.getOrigin(),q==null?null:q.getSourceUrl());
+    }
     @Transactional
     public InterviewQuestionResponse submitAnswer(String studentEmail, AnswerRequest request) {
-        InterviewSession session = sessionRepository.findById(request.sessionId())
-                .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Session not found"));
-
-        if (!session.getStudent().getEmail().equals(studentEmail)) {
-            throw new ApiException(HttpStatus.FORBIDDEN, "This session does not belong to you");
+        InterviewSession s=sessionRepository.lockById(request.sessionId()).orElseThrow(()->new ApiException(HttpStatus.NOT_FOUND,"Session not found"));
+        if(!s.getStudent().getEmail().equals(studentEmail)) throw new ApiException(HttpStatus.FORBIDDEN,"This session does not belong to you");
+        if(s.getStatus()!=InterviewSession.SessionStatus.IN_PROGRESS || !java.util.Objects.equals(s.getCurrentQuestionId(),request.questionId())) throw new ApiException(HttpStatus.CONFLICT,"Question is not active");
+        Question current=questionRepository.findById(request.questionId()).orElseThrow(()->new ApiException(HttpStatus.NOT_FOUND,"Question not found"));
+        var result=engine.submitAnswer(s,current,request.answerText());
+        List<Response> history=responseRepository.findBySessionIdOrderByAnsweredAtAsc(s.getId());
+        if(history.size()>=s.getMaxQuestions()) return issue(s,null,result);
+        if(result.lastScore()<6 && !current.isFollowUp() && "TECHNICAL".equals(current.getStage()) && history.size()<s.getMaxQuestions()-(s.getType()==InterviewSession.InterviewType.SIMULATION && s.getCompany().getName().startsWith("TCS") ? 2 : 1) && history.stream().noneMatch(r->r.isWasFollowUp()&&r.getQuestion().getTopic().equals(current.getTopic()))){
+            var follow=questionRepository.findByCompanyIdAndApprovedTrue(s.getCompany().getId()).stream().filter(q->q.isFollowUp()&&q.getTopic().equals(current.getTopic())&&"TECHNICAL".equals(q.getStage())).findFirst();
+            if(follow.isPresent()) return issue(s,follow.get(),result);
         }
-        Question currentQuestion = questionRepository.findById(request.questionId())
-                .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Question not found"));
-
-        InterviewQuestionResponse engineResult = engine.submitAnswer(session, currentQuestion, request.answerText());
-
-        if (engineResult.nextQuestionId() != null) {
-            return engineResult;
-        }
-
-        Set<Long> askedQuestionIds = responseRepository.findBySessionIdOrderByAnsweredAtAsc(session.getId())
-                .stream().map(r -> r.getQuestion().getId()).collect(Collectors.toSet());
-
-        List<Question> bank = fetchBankForType(session.getCompany().getId(), session.getType().name());
-        var nextBase = bank.stream().filter(q -> !askedQuestionIds.contains(q.getId())).findFirst();
-
-        boolean reachedLimit = askedQuestionIds.size() >= session.getMaxQuestions();
-
-        if (nextBase.isEmpty() || reachedLimit) {
-            session.setStatus(InterviewSession.SessionStatus.COMPLETED);
-            session.setEndedAt(Instant.now());
-            sessionRepository.save(session);
-            return new InterviewQuestionResponse(session.getId(), true,
-                    engineResult.lastScore(), engineResult.lastFeedback(), engineResult.wasFollowUp(),
-                    engineResult.currentDifficulty(), null, null, null);
-        }
-
-        Question next = nextBase.get();
-        return new InterviewQuestionResponse(session.getId(), false,
-                engineResult.lastScore(), engineResult.lastFeedback(), engineResult.wasFollowUp(),
-                engineResult.currentDifficulty(), next.getId(), next.getText(), next.getTopic());
+        return issue(s,choose(s,fetchBankForType(s.getCompany().getId(),s.getType().name()),history),result);
     }
 
     @Transactional(readOnly = true)
@@ -139,7 +129,8 @@ public class InterviewService {
                 insights.strengths(),
                 insights.weaknesses(),
                 insights.studyPlan(),
-                insights.recommendation()
+                insights.recommendation(),
+                responses.stream().collect(Collectors.groupingBy(r -> r.getQuestion().getStage()==null?"LEGACY":r.getQuestion().getStage(), Collectors.averagingInt(Response::getScore)))
         );
     }
 

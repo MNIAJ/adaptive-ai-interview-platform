@@ -1,34 +1,40 @@
+
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/interview_platform
-    username: postgres
-    password: ayush1923
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/interview_platform}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD}
+
   jpa:
     hibernate:
-      ddl-auto: update   # fine for a student project; use Flyway/Liquibase migrations for anything real
-    show-sql: true
+      ddl-auto: update
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
+
   servlet:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
+
   ai:
     ollama:
-      base-url: http://localhost:11434
+      base-url: ${OLLAMA_URL:http://localhost:11434}
       chat:
         options:
-          model: llama3.2
+          model: ${OLLAMA_MODEL:llama3.2}
           temperature: 0.3
 
 app:
   jwt:
-    secret: ${JWT_SECRET:this-is-a-dev-only-secret-change-me-before-any-real-deployment-32chars}
-    expiration-ms: 86400000  # 24 hours
+    secret: ${JWT_SECRET}
+    expiration-ms: 86400000
+
   ai:
-    provider: springai   # mock | openai | springai
+    provider: ${AI_PROVIDER:springai}
+
   frontend-url: ${FRONTEND_URL:http://localhost:5173}

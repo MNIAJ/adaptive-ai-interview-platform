@@ -126,12 +126,13 @@ public class SpringAIEvaluationService implements AIEvaluationService {
             Matcher scoreMatcher = SCORE_PATTERN.matcher(content);
             Matcher feedbackMatcher = FEEDBACK_PATTERN.matcher(content);
 
-            int score = scoreMatcher.find() ? Integer.parseInt(scoreMatcher.group(1)) : 5;
+            if (!scoreMatcher.find()) throw new IllegalStateException("Missing score");
+            int score = Integer.parseInt(scoreMatcher.group(1));
             String feedback = feedbackMatcher.find() ? feedbackMatcher.group(1).trim() : content.trim();
 
             return new EvaluationResult(Math.max(1, Math.min(10, score)), feedback);
         } catch (Exception e) {
-            return new EvaluationResult(5, "Automated evaluation unavailable right now; manual review recommended.");
+            throw new com.aiplacement.interview.exception.ApiException(org.springframework.http.HttpStatus.SERVICE_UNAVAILABLE, "AI evaluation unavailable; retry your answer.");
         }
     }
 

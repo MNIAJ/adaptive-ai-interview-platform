@@ -43,6 +43,7 @@ public class InterviewSession {
     @Builder.Default
     private List<Response> responses = new ArrayList<>();
 
+    private Long currentQuestionId;
     private Instant startedAt;
     private Instant endedAt;
 
@@ -51,6 +52,6 @@ public class InterviewSession {
         this.startedAt = Instant.now();
     }
 
-    public enum InterviewType { TECHNICAL, HR, BEHAVIORAL, CORE_CS, CODING }
+    public enum InterviewType { TECHNICAL, HR, BEHAVIORAL, CORE_CS, CODING, SIMULATION }
     public enum SessionStatus { IN_PROGRESS, COMPLETED, ABANDONED }
 }

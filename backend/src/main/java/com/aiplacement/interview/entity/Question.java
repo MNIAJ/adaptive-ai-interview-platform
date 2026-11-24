@@ -33,5 +33,9 @@ public class Question {
     // boolean flag rather than a separate table — simplest thing that works.
     private boolean isFollowUp;
 
+    private String stage;
+    private String origin;
+    @Column(length = 1000)
+    private String sourceUrl;
     private boolean approved; // Faculty must approve before it enters rotation
 }

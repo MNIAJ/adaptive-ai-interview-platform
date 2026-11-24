@@ -15,5 +15,5 @@ public record ReportResponse(
     List<String> keyStrengths,
     List<String> keyWeaknesses,
     List<String> studyPlan,
-    String recommendation
+    String recommendation, java.util.Map<String, Double> stageScores
 ) {}

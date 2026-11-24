@@ -11,5 +11,9 @@ public record InterviewQuestionResponse(
     Integer currentDifficulty,
     Long nextQuestionId,
     String nextQuestionText,
-    String nextQuestionTopic
-) {}
+    String nextQuestionTopic, String stage, String origin, String sourceUrl
+) {
+ public InterviewQuestionResponse(Long sid, boolean done, Integer score, String feedback, Boolean follow, Integer difficulty, Long qid, String text, String topic) {
+  this(sid,done,score,feedback,follow,difficulty,qid,text,topic,null,null,null);
+ }
+}

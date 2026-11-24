@@ -1,0 +1,124 @@
+company|stage|topic|difficulty|question|origin|source_url|follow_up
+TCS Ninja|TECHNICAL|OOP|2|Compare procedural and object-oriented design|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|TECHNICAL|SQL|3|Explain referential integrity when deleting a parent row|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|TECHNICAL|SQL|2|Compare DELETE and TRUNCATE|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|TECHNICAL|DBMS|3|Describe candidate and foreign keys|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|TECHNICAL|SQL|3|Explain inner and outer joins|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|TECHNICAL|DSA|3|Describe decimal to binary conversion|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|TECHNICAL|CS Fundamentals|2|Compare processes and threads|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-ninja-interview-experience-jan-2026-final-year-cse-student/|false
+TCS Ninja|TECHNICAL|OOP|2|Contrast abstraction and encapsulation|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-ninja-interview-experience-jan-2026-final-year-cse-student/|false
+TCS Ninja|TECHNICAL|OOP|3|Explain inheritance in a real application|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-ninja-interview-experience-jan-2026-final-year-cse-student/|false
+TCS Ninja|MANAGERIAL|Leadership Principles|2|Describe two qualities of a good team leader|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|HR|Communication|2|Explain your motivation for joining TCS|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|HR|Communication|2|Discuss your availability for relocation and shifts|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
+TCS Ninja|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
+TCS Ninja|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
+TCS Ninja|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
+TCS Ninja|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
+TCS Ninja|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
+TCS Ninja|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
+TCS Ninja|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
+TCS Ninja|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
+TCS Digital|TECHNICAL|SQL|3|Write a query for the second largest distinct salary|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|TECHNICAL|DBMS|3|Explain how normalization reduces redundancy|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|TECHNICAL|SQL|4|Describe how to investigate a slow SQL query|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|TECHNICAL|OOP|2|Contrast interfaces and abstract classes|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|TECHNICAL|DSA|2|Compare stack and queue operations|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|TECHNICAL|DSA|4|Explain hash map lookup and collisions|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|TECHNICAL|System Design|3|Describe your project architecture|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-2024/|false
+TCS Digital|TECHNICAL|SQL|3|Explain SQL injection and parameterized queries|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-2024/|false
+TCS Digital|TECHNICAL|DSA|3|Explain how to produce a lower triangular matrix|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-2024/|false
+TCS Digital|HR|Communication|2|Describe your project contribution|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|HR|Communication|2|Explain why this role interests you|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|HR|Communication|2|Describe a personal strength|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
+TCS Digital|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
+TCS Digital|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
+TCS Digital|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
+TCS Digital|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
+TCS Digital|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
+TCS Digital|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
+TCS Digital|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
+TCS Digital|TECHNICAL|System Design|1|Describe one failure case and how you would handle it|ORIGINAL_PRACTICE||true
+TCS Prime|TECHNICAL|System Design|4|Explain JWT authentication and its limitations|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|TECHNICAL|SQL|3|Describe how joins combine relational data|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|TECHNICAL|DSA|4|Explain backtracking for navigating a maze|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|TECHNICAL|OOP|3|Explain polymorphism with an example|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|TECHNICAL|CS Fundamentals|3|Describe how the browser DOM represents a page|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|TECHNICAL|System Design|3|Explain how React renders updates|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|TECHNICAL|DSA|4|Explain AVL tree rotations|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
+TCS Prime|TECHNICAL|DSA|3|Describe circular queue index updates|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
+TCS Prime|TECHNICAL|SQL|3|Explain SQL views|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
+TCS Prime|TECHNICAL|CS Fundamentals|2|Compare XML and JSON|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
+TCS Prime|MANAGERIAL|Leadership Principles|2|Explain why you chose software development|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|HR|Communication|2|Discuss your career plans|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|HR|Communication|2|Describe your availability for shifts|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
+TCS Prime|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
+TCS Prime|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
+TCS Prime|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
+TCS Prime|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
+TCS Prime|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
+TCS Prime|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
+TCS Prime|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
+TCS Prime|TECHNICAL|System Design|1|Describe one failure case and how you would handle it|ORIGINAL_PRACTICE||true
+HCLTech|TECHNICAL|OOP|2|Compare Java String and StringBuilder|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|TECHNICAL|OOP|2|Explain Java access modifiers|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|TECHNICAL|OOP|3|Distinguish final and finally|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|TECHNICAL|CS Fundamentals|2|Explain JVM JRE and JDK|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|TECHNICAL|OOP|2|Compare Java and C++ object models|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|TECHNICAL|OOP|3|Describe abstraction and interfaces|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|TECHNICAL|CS Fundamentals|3|Explain JavaScript promises|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
+HCLTech|TECHNICAL|CS Fundamentals|3|Explain hoisting|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
+HCLTech|TECHNICAL|DBMS|3|Explain normalization|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
+HCLTech|TECHNICAL|OOP|3|Explain inheritance with an example|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
+HCLTech|HR|Communication|2|Explain why HCLTech interests you|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|HR|Communication|2|Describe your role in a project|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|HR|Communication|2|Explain what you bring to a team|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
+HCLTech|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
+HCLTech|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
+HCLTech|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
+HCLTech|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
+HCLTech|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
+HCLTech|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
+Infosys|TECHNICAL|SQL|3|Retrieve the top three students by marks using SQL|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|TECHNICAL|DBMS|3|Explain second and third normal forms|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|TECHNICAL|DBMS|4|Identify the normal form of a table with transitive dependencies|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|TECHNICAL|CS Fundamentals|3|Describe the software development lifecycle|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|TECHNICAL|SQL|3|Explain ordering and limiting query results|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|TECHNICAL|DBMS|3|Explain why functional dependencies matter|ORIGINAL_PRACTICE||false
+Infosys|TECHNICAL|DSA|3|Describe an iterative Fibonacci algorithm|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
+Infosys|TECHNICAL|DSA|3|Explain Euclidean GCD|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
+Infosys|TECHNICAL|OOP|3|Explain encapsulation with an example|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
+Infosys|TECHNICAL|CS Fundamentals|2|Compare waterfall and iterative development|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
+Infosys|HR|Communication|2|Describe your academic project|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|HR|Communication|2|Explain what you learned from a certification|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|HR|Communication|2|Introduce your technical background|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
+Infosys|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
+Infosys|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
+Infosys|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
+Infosys|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
+Infosys|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
+Infosys|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
+Infosys|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
+Infosys|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
+Cognizant|TECHNICAL|DSA|3|Explain how to remove duplicate array elements|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|TECHNICAL|SQL|3|Explain a nested SELECT query|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|TECHNICAL|SQL|2|Contrast DDL and DML|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|TECHNICAL|DBMS|3|Explain transaction ACID guarantees|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|TECHNICAL|CS Fundamentals|2|Compare Python sets and tuples|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|TECHNICAL|DSA|2|Describe a concise way to reverse a string|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|TECHNICAL|SQL|3|Explain COMMIT and rollback|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|TECHNICAL|OOP|3|Explain Java exception handling|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
+Cognizant|TECHNICAL|OOP|3|Describe the Object class|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
+Cognizant|TECHNICAL|SQL|2|Contrast SQL and MySQL|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
+Cognizant|TECHNICAL|OOP|3|Explain when interfaces are useful|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
+Cognizant|HR|Communication|2|Describe your project implementation|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|HR|Communication|2|Introduce your technical skills|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
+Cognizant|HR|Communication|2|Describe a technical challenge you overcame|ORIGINAL_PRACTICE||false
+Cognizant|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
+Cognizant|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
+Cognizant|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
+Cognizant|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
+Cognizant|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
+Cognizant|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
+Cognizant|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
+Cognizant|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
