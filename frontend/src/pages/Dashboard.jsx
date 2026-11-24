@@ -2,33 +2,21 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from '../api/axios.js'
 
-const COMPANIES = [
-  { name: 'Amazon', difficulty: 'HIGH', color: '#ff9900', topics: 'DSA · Leadership · System Design' },
-  { name: 'Microsoft', difficulty: 'HIGH', color: '#00a1f1', topics: 'OOP · DSA · Problem Solving' },
-  { name: 'Google', difficulty: 'HIGH', color: '#34a853', topics: 'DSA · System Design · Problem Solving' },
-
-  { name: 'TCS Ninja', difficulty: 'LOW', color: '#6c63ff', topics: 'CS Fundamentals · DBMS · OOP · Communication' },
-  { name: 'TCS Digital', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DSA · SQL · OOP · DBMS · System Design' },
-  { name: 'TCS Prime', difficulty: 'MEDIUM', color: '#6c63ff', topics: 'DSA · SQL · OOP · DBMS · Aptitude Reasoning' },
-
-  { name: 'Infosys', difficulty: 'MEDIUM', color: '#007cc3', topics: 'CS Fundamentals · Communication · DBMS' },
-  { name: 'Accenture', difficulty: 'MEDIUM', color: '#a100ff', topics: 'Communication · OOP · Reasoning' },
-  { name: 'Capgemini', difficulty: 'MEDIUM', color: '#0070ad', topics: 'Communication · DSA · DBMS' },
-  { name: 'Deloitte', difficulty: 'MEDIUM', color: '#86bc25', topics: 'Communication · Reasoning · CS Fundamentals' },
-]
+const COMPANIES = [{"name": "TCS Ninja", "difficulty": "LOW", "color": "#6c63ff", "topics": "Public-report inspired \u00b7 Technical \u00b7 Projects \u00b7 HR"}, {"name": "TCS Digital", "difficulty": "MEDIUM", "color": "#6c63ff", "topics": "Public-report inspired \u00b7 Technical \u00b7 Projects \u00b7 HR"}, {"name": "TCS Prime", "difficulty": "MEDIUM", "color": "#6c63ff", "topics": "Public-report inspired \u00b7 Technical \u00b7 Projects \u00b7 HR"}, {"name": "HCLTech", "difficulty": "MEDIUM", "color": "#6c63ff", "topics": "Public-report inspired \u00b7 Technical \u00b7 Projects \u00b7 HR"}, {"name": "Infosys", "difficulty": "MEDIUM", "color": "#6c63ff", "topics": "Public-report inspired \u00b7 Technical \u00b7 Projects \u00b7 HR"}, {"name": "Cognizant", "difficulty": "MEDIUM", "color": "#6c63ff", "topics": "Public-report inspired \u00b7 Technical \u00b7 Projects \u00b7 HR"}]
 
 const INTERVIEW_TYPES = [
+  { value: "SIMULATION", label: "Campus simulation", desc: "Introduction → Projects → Technical → HR" },
   { value: 'TECHNICAL',  label: 'Technical',  desc: 'DSA, System Design, Core CS' },
   { value: 'HR',         label: 'HR',          desc: 'Behavioural, Communication' },
   { value: 'BEHAVIORAL', label: 'Behavioural', desc: 'Situational, Leadership' },
   { value: 'CORE_CS',    label: 'Core CS',     desc: 'OS, Networks, DBMS, OOP' },
 ]
 
-const QUESTION_COUNTS = [5, 7, 10, 15]
+const QUESTION_COUNTS = [5, 7, 10]
 
 export default function Dashboard() {
   const [selectedCompany, setSelectedCompany] = useState(null)
-  const [interviewType, setInterviewType] = useState('TECHNICAL')
+  const [interviewType, setInterviewType] = useState('SIMULATION')
   const [totalQuestions, setTotalQuestions] = useState(7)
   const [resumeFile, setResumeFile] = useState(null)
   const [resumeResult, setResumeResult] = useState(null)
@@ -78,7 +66,7 @@ export default function Dashboard() {
         {/* Header */}
         <div style={{ marginBottom: 32 }}>
           <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 4 }}>Mock Interviews</h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Choose a company and interview type to begin your session.</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Practice with public candidate-report inspired questions. Not verified college-specific or official hiring data. Mock mode uses answer length, not AI correctness.</p>
         </div>
 
         {error && (
@@ -93,7 +81,7 @@ export default function Dashboard() {
             <div>
               <p style={{ fontWeight: 500, color: 'var(--text-primary)', marginBottom: 2 }}>Resume Analysis</p>
               <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
-                {resumeResult ? 'Re-upload to replace your saved resume analysis' : 'Upload your PDF to auto-detect skills and personalise questions'}
+                {resumeResult ? 'Re-upload to replace your saved resume analysis' : 'Upload your PDF to auto-detect skills (not yet used for question selection)'}
               </p>
             </div>
             <form onSubmit={handleUpload} style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
