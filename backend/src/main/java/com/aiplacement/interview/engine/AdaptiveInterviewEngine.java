@@ -35,21 +35,21 @@ public class AdaptiveInterviewEngine {
 
     public InterviewQuestionResponse submitAnswer(InterviewSession session, Question currentQuestion, String answerText) {
         AIEvaluationService.EvaluationResult eval =
-                aiEvaluationService.evaluate(currentQuestion.getText(), currentQuestion.getTopic(), answerText);
+                "[SKIPPED]".equals(answerText) ? new AIEvaluationService.EvaluationResult(0,"Question skipped.") : aiEvaluationService.evaluate(currentQuestion.getText() + (currentQuestion.getRubric()==null || currentQuestion.getRubric().isBlank() ? "" : "\nExpected answer criteria: " + currentQuestion.getRubric()), currentQuestion.getTopic(), answerText);
 
         Response response = Response.builder()
                 .session(session)
                 .question(currentQuestion)
                 .answerText(answerText)
                 .score(eval.score())
-                .aiFeedback(eval.feedback())
+                .aiFeedback(eval.feedback()==null?"":eval.feedback().substring(0,Math.min(2000,eval.feedback().length())))
                 .wasFollowUp(currentQuestion.isFollowUp())
                 .build();
         responseRepository.save(response);
 
         session.setCurrentDifficulty(eval.isWeak()
                 ? Math.max(1, session.getCurrentDifficulty() - 1)
-                : Math.min(5, session.getCurrentDifficulty() + 1));
+                : eval.score() >= 8 ? Math.min(5, session.getCurrentDifficulty() + 1) : session.getCurrentDifficulty());
 
         return new InterviewQuestionResponse(
                 session.getId(),
