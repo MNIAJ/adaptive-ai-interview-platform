@@ -39,7 +39,7 @@ export default function Report() {
                     <p style={{ fontSize: 36, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1 }}>{report.averageScore}<span style={{ fontSize: 16, color: 'var(--text-muted)', fontWeight: 400 }}>/10</span></p>
                 </div>
                 <div className="card" style={{ padding: 20 }}>
-                    <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>Company Readiness</p>
+                    <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>Practice performance</p>
                     <p style={{ fontSize: 36, fontWeight: 700, color: scoreColor, lineHeight: 1 }}>{readiness}<span style={{ fontSize: 16, fontWeight: 400 }}>%</span></p>
                     <div style={{ marginTop: 10, height: 4, borderRadius: 2, background: 'var(--bg-raised)' }}>
                         <div style={{ width: `${readiness}%`, height: '100%', borderRadius: 2, background: scoreColor, transition: 'width 0.6s ease' }} />
@@ -47,6 +47,8 @@ export default function Report() {
                 </div>
             </div>
 
+            <p style={{fontSize:12,marginBottom:12}}>Practice score, not a hiring probability. Based on the questions answered in this session.</p>
+            <div className="card" style={{padding:20,marginBottom:20}}><h3>Interview stage scores</h3>{Object.entries(report.stageScores || {}).map(([stage,score]) => <p key={stage}>{stage}: {score.toFixed(1)}/10</p>)}</div>
             {/* Topics (unchanged — still the plain per-topic score buckets) */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
                 <div className="card" style={{ padding: 20 }}>
