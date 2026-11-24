@@ -64,7 +64,7 @@ export default function History() {
                                 {s.averageScore != null && (
                                     <div style={{ textAlign: 'right' }}>
                                         <p style={{ fontSize: 18, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1 }}>{s.averageScore}<span style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 400 }}>/10</span></p>
-                                        <p style={{ fontSize: 11, color: 'var(--text-muted)' }}>{s.readinessPercent}% ready</p>
+                                        <p style={{ fontSize: 11, color: 'var(--text-muted)' }}>{s.readinessPercent}% practice score</p>
                                     </div>
                                 )}
                                 {s.status === 'COMPLETED' && (
