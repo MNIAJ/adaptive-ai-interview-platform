@@ -4,3 +4,7 @@ backend/target/
 .env
 .env.local
 *.zip
+
+.jwt-secret.local
+.idea/
+campus-placement-mvp/
