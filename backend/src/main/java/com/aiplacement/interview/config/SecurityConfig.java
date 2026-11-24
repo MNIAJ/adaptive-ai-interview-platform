@@ -53,6 +53,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/companies/**").permitAll() // browsing companies doesn't need auth
                 .anyRequest().authenticated()
             )
+            .exceptionHandling(e -> e.authenticationEntryPoint((req,res,ex) -> res.sendError(401)))
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
