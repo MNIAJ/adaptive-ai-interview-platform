@@ -2,7 +2,7 @@ import csv, collections
 from pathlib import Path
 p=Path(__file__).parent/'backend/src/main/resources/seed-data/campus_questions.psv'
 rows=list(csv.DictReader(p.open(),delimiter='|'))
-assert len(rows)==123
+assert len(rows)>=300
 assert len({(r['company'],r['question']) for r in rows})==len(rows)
 for r in rows:
  assert 1<=int(r['difficulty'])<=5

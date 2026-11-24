@@ -1,124 +1,611 @@
-company|stage|topic|difficulty|question|origin|source_url|follow_up
-TCS Ninja|TECHNICAL|OOP|2|Compare procedural and object-oriented design|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|TECHNICAL|SQL|3|Explain referential integrity when deleting a parent row|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|TECHNICAL|SQL|2|Compare DELETE and TRUNCATE|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|TECHNICAL|DBMS|3|Describe candidate and foreign keys|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|TECHNICAL|SQL|3|Explain inner and outer joins|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|TECHNICAL|DSA|3|Describe decimal to binary conversion|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|TECHNICAL|CS Fundamentals|2|Compare processes and threads|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-ninja-interview-experience-jan-2026-final-year-cse-student/|false
-TCS Ninja|TECHNICAL|OOP|2|Contrast abstraction and encapsulation|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-ninja-interview-experience-jan-2026-final-year-cse-student/|false
-TCS Ninja|TECHNICAL|OOP|3|Explain inheritance in a real application|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-ninja-interview-experience-jan-2026-final-year-cse-student/|false
-TCS Ninja|MANAGERIAL|Leadership Principles|2|Describe two qualities of a good team leader|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|HR|Communication|2|Explain your motivation for joining TCS|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|HR|Communication|2|Discuss your availability for relocation and shifts|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-tcs-ninja-off-campus/|false
-TCS Ninja|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
-TCS Ninja|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
-TCS Ninja|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
-TCS Ninja|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
-TCS Ninja|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
-TCS Ninja|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
-TCS Ninja|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
-TCS Ninja|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
-TCS Digital|TECHNICAL|SQL|3|Write a query for the second largest distinct salary|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|TECHNICAL|DBMS|3|Explain how normalization reduces redundancy|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|TECHNICAL|SQL|4|Describe how to investigate a slow SQL query|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|TECHNICAL|OOP|2|Contrast interfaces and abstract classes|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|TECHNICAL|DSA|2|Compare stack and queue operations|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|TECHNICAL|DSA|4|Explain hash map lookup and collisions|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|TECHNICAL|System Design|3|Describe your project architecture|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-2024/|false
-TCS Digital|TECHNICAL|SQL|3|Explain SQL injection and parameterized queries|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-2024/|false
-TCS Digital|TECHNICAL|DSA|3|Explain how to produce a lower triangular matrix|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-2024/|false
-TCS Digital|HR|Communication|2|Describe your project contribution|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|HR|Communication|2|Explain why this role interests you|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|HR|Communication|2|Describe a personal strength|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-digital-interview-experience-on-campus-7/|false
-TCS Digital|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
-TCS Digital|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
-TCS Digital|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
-TCS Digital|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
-TCS Digital|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
-TCS Digital|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
-TCS Digital|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
-TCS Digital|TECHNICAL|System Design|1|Describe one failure case and how you would handle it|ORIGINAL_PRACTICE||true
-TCS Prime|TECHNICAL|System Design|4|Explain JWT authentication and its limitations|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|TECHNICAL|SQL|3|Describe how joins combine relational data|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|TECHNICAL|DSA|4|Explain backtracking for navigating a maze|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|TECHNICAL|OOP|3|Explain polymorphism with an example|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|TECHNICAL|CS Fundamentals|3|Describe how the browser DOM represents a page|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|TECHNICAL|System Design|3|Explain how React renders updates|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|TECHNICAL|DSA|4|Explain AVL tree rotations|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
-TCS Prime|TECHNICAL|DSA|3|Describe circular queue index updates|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
-TCS Prime|TECHNICAL|SQL|3|Explain SQL views|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
-TCS Prime|TECHNICAL|CS Fundamentals|2|Compare XML and JSON|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-interview-experience-for-prime/|false
-TCS Prime|MANAGERIAL|Leadership Principles|2|Explain why you chose software development|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|HR|Communication|2|Discuss your career plans|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|HR|Communication|2|Describe your availability for shifts|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/tcs-nqt-interview-experience-prime-august-2024/|false
-TCS Prime|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
-TCS Prime|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
-TCS Prime|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
-TCS Prime|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
-TCS Prime|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
-TCS Prime|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
-TCS Prime|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
-TCS Prime|TECHNICAL|System Design|1|Describe one failure case and how you would handle it|ORIGINAL_PRACTICE||true
-HCLTech|TECHNICAL|OOP|2|Compare Java String and StringBuilder|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|TECHNICAL|OOP|2|Explain Java access modifiers|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|TECHNICAL|OOP|3|Distinguish final and finally|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|TECHNICAL|CS Fundamentals|2|Explain JVM JRE and JDK|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|TECHNICAL|OOP|2|Compare Java and C++ object models|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|TECHNICAL|OOP|3|Describe abstraction and interfaces|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|TECHNICAL|CS Fundamentals|3|Explain JavaScript promises|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
-HCLTech|TECHNICAL|CS Fundamentals|3|Explain hoisting|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
-HCLTech|TECHNICAL|DBMS|3|Explain normalization|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
-HCLTech|TECHNICAL|OOP|3|Explain inheritance with an example|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcltech-interview-experience-graduate-engineer-trainee-get-on-campus-full-time/|false
-HCLTech|HR|Communication|2|Explain why HCLTech interests you|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|HR|Communication|2|Describe your role in a project|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|HR|Communication|2|Explain what you bring to a team|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/hcl-interview-experience-on-campus-2023/|false
-HCLTech|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
-HCLTech|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
-HCLTech|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
-HCLTech|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
-HCLTech|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
-HCLTech|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
-Infosys|TECHNICAL|SQL|3|Retrieve the top three students by marks using SQL|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|TECHNICAL|DBMS|3|Explain second and third normal forms|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|TECHNICAL|DBMS|4|Identify the normal form of a table with transitive dependencies|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|TECHNICAL|CS Fundamentals|3|Describe the software development lifecycle|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|TECHNICAL|SQL|3|Explain ordering and limiting query results|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|TECHNICAL|DBMS|3|Explain why functional dependencies matter|ORIGINAL_PRACTICE||false
-Infosys|TECHNICAL|DSA|3|Describe an iterative Fibonacci algorithm|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
-Infosys|TECHNICAL|DSA|3|Explain Euclidean GCD|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
-Infosys|TECHNICAL|OOP|3|Explain encapsulation with an example|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
-Infosys|TECHNICAL|CS Fundamentals|2|Compare waterfall and iterative development|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-on-campus-2021/|false
-Infosys|HR|Communication|2|Describe your academic project|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|HR|Communication|2|Explain what you learned from a certification|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|HR|Communication|2|Introduce your technical background|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-campus-system-engineer/|false
-Infosys|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
-Infosys|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
-Infosys|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
-Infosys|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
-Infosys|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
-Infosys|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
-Infosys|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
-Infosys|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
-Cognizant|TECHNICAL|DSA|3|Explain how to remove duplicate array elements|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|TECHNICAL|SQL|3|Explain a nested SELECT query|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|TECHNICAL|SQL|2|Contrast DDL and DML|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|TECHNICAL|DBMS|3|Explain transaction ACID guarantees|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|TECHNICAL|CS Fundamentals|2|Compare Python sets and tuples|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|TECHNICAL|DSA|2|Describe a concise way to reverse a string|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|TECHNICAL|SQL|3|Explain COMMIT and rollback|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|TECHNICAL|OOP|3|Explain Java exception handling|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
-Cognizant|TECHNICAL|OOP|3|Describe the Object class|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
-Cognizant|TECHNICAL|SQL|2|Contrast SQL and MySQL|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
-Cognizant|TECHNICAL|OOP|3|Explain when interfaces are useful|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-interview-experience-genc-category/|false
-Cognizant|HR|Communication|2|Describe your project implementation|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|HR|Communication|2|Introduce your technical skills|PUBLIC_REPORT_INSPIRED|https://www.geeksforgeeks.org/interview-experiences/cognizant-genc-2024-interview-experience/|false
-Cognizant|HR|Communication|2|Describe a technical challenge you overcame|ORIGINAL_PRACTICE||false
-Cognizant|INTRO|Communication|2|Summarize your education and technical interests|ORIGINAL_PRACTICE||false
-Cognizant|PROJECT|System Design|2|Explain one project and your individual contribution|ORIGINAL_PRACTICE||false
-Cognizant|PROJECT|System Design|2|Describe a design trade-off in your project|ORIGINAL_PRACTICE||false
-Cognizant|TECHNICAL|CS Fundamentals|1|Explain the mechanism with a concrete example|ORIGINAL_PRACTICE||true
-Cognizant|TECHNICAL|DBMS|1|Give a small counterexample that illustrates why the concept matters|ORIGINAL_PRACTICE||true
-Cognizant|TECHNICAL|DSA|1|Work through a small input and explain time and space complexity|ORIGINAL_PRACTICE||true
-Cognizant|TECHNICAL|OOP|1|Give a concrete code example of the concept and explain its behavior|ORIGINAL_PRACTICE||true
-Cognizant|TECHNICAL|SQL|1|Illustrate your answer using a small table and sample query|ORIGINAL_PRACTICE||true
+company|stage|topic|difficulty|question|origin|source_url|follow_up|rubric
+TCS Ninja|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+TCS Ninja|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+TCS Ninja|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+TCS Ninja|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+TCS Ninja|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+TCS Ninja|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+TCS Ninja|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+TCS Ninja|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+TCS Ninja|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+TCS Ninja|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+TCS Ninja|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+TCS Ninja|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+TCS Ninja|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+TCS Ninja|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+TCS Ninja|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+TCS Ninja|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+TCS Ninja|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+TCS Ninja|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+TCS Ninja|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+TCS Ninja|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+TCS Ninja|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+TCS Ninja|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+TCS Ninja|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+TCS Ninja|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+TCS Ninja|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+TCS Ninja|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+TCS Ninja|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+TCS Ninja|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+TCS Ninja|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+TCS Ninja|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+TCS Ninja|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+TCS Ninja|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+TCS Ninja|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+TCS Ninja|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+TCS Ninja|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+TCS Ninja|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+TCS Ninja|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+TCS Ninja|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+TCS Ninja|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+TCS Ninja|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+TCS Ninja|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+TCS Ninja|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+TCS Ninja|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+TCS Ninja|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+TCS Ninja|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+TCS Ninja|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+TCS Ninja|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+TCS Ninja|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+TCS Ninja|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+TCS Digital|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+TCS Digital|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+TCS Digital|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+TCS Digital|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+TCS Digital|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+TCS Digital|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+TCS Digital|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+TCS Digital|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+TCS Digital|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+TCS Digital|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+TCS Digital|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+TCS Digital|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+TCS Digital|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+TCS Digital|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+TCS Digital|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+TCS Digital|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+TCS Digital|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+TCS Digital|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+TCS Digital|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+TCS Digital|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+TCS Digital|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+TCS Digital|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+TCS Digital|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+TCS Digital|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+TCS Digital|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+TCS Digital|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+TCS Digital|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+TCS Digital|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+TCS Digital|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+TCS Digital|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+TCS Digital|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+TCS Digital|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+TCS Digital|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+TCS Digital|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+TCS Digital|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+TCS Digital|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+TCS Digital|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+TCS Digital|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+TCS Digital|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+TCS Digital|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+TCS Digital|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+TCS Digital|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+TCS Digital|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+TCS Digital|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+TCS Digital|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+TCS Digital|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+TCS Digital|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+TCS Digital|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+TCS Digital|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+TCS Prime|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+TCS Prime|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+TCS Prime|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+TCS Prime|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+TCS Prime|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+TCS Prime|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+TCS Prime|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+TCS Prime|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+TCS Prime|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+TCS Prime|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+TCS Prime|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+TCS Prime|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+TCS Prime|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+TCS Prime|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+TCS Prime|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+TCS Prime|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+TCS Prime|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+TCS Prime|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+TCS Prime|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+TCS Prime|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+TCS Prime|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+TCS Prime|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+TCS Prime|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+TCS Prime|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+TCS Prime|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+TCS Prime|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+TCS Prime|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+TCS Prime|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+TCS Prime|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+TCS Prime|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+TCS Prime|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+TCS Prime|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+TCS Prime|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+TCS Prime|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+TCS Prime|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+TCS Prime|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+TCS Prime|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+TCS Prime|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+TCS Prime|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+TCS Prime|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+TCS Prime|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+TCS Prime|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+TCS Prime|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+TCS Prime|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+TCS Prime|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+TCS Prime|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+TCS Prime|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+TCS Prime|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+TCS Prime|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+HCLTech|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+HCLTech|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+HCLTech|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+HCLTech|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+HCLTech|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+HCLTech|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+HCLTech|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+HCLTech|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+HCLTech|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+HCLTech|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+HCLTech|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+HCLTech|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+HCLTech|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+HCLTech|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+HCLTech|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+HCLTech|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+HCLTech|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+HCLTech|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+HCLTech|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+HCLTech|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+HCLTech|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+HCLTech|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+HCLTech|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+HCLTech|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+HCLTech|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+HCLTech|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+HCLTech|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+HCLTech|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+HCLTech|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+HCLTech|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+HCLTech|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+HCLTech|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+HCLTech|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+HCLTech|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+HCLTech|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+HCLTech|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+HCLTech|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+HCLTech|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+HCLTech|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+HCLTech|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+HCLTech|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+HCLTech|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+HCLTech|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+HCLTech|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+HCLTech|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+HCLTech|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+HCLTech|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+HCLTech|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+HCLTech|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+Infosys|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+Infosys|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+Infosys|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+Infosys|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+Infosys|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+Infosys|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+Infosys|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+Infosys|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+Infosys|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+Infosys|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+Infosys|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+Infosys|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+Infosys|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+Infosys|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+Infosys|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+Infosys|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+Infosys|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+Infosys|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+Infosys|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+Infosys|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+Infosys|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+Infosys|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+Infosys|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+Infosys|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+Infosys|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+Infosys|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+Infosys|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+Infosys|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+Infosys|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+Infosys|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+Infosys|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+Infosys|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+Infosys|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+Infosys|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+Infosys|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+Infosys|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+Infosys|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+Infosys|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+Infosys|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+Infosys|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+Infosys|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+Infosys|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+Infosys|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+Infosys|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+Infosys|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+Infosys|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+Infosys|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+Infosys|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+Infosys|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+Cognizant|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+Cognizant|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+Cognizant|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+Cognizant|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+Cognizant|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+Cognizant|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+Cognizant|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+Cognizant|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+Cognizant|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+Cognizant|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+Cognizant|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+Cognizant|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+Cognizant|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+Cognizant|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+Cognizant|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+Cognizant|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+Cognizant|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+Cognizant|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+Cognizant|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+Cognizant|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+Cognizant|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+Cognizant|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+Cognizant|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+Cognizant|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+Cognizant|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+Cognizant|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+Cognizant|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+Cognizant|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+Cognizant|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+Cognizant|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+Cognizant|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+Cognizant|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+Cognizant|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+Cognizant|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+Cognizant|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+Cognizant|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+Cognizant|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+Cognizant|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+Cognizant|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+Cognizant|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+Cognizant|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+Cognizant|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+Cognizant|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+Cognizant|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+Cognizant|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+Cognizant|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+Cognizant|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+Cognizant|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+Cognizant|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+Connecticus|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+Connecticus|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+Connecticus|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+Connecticus|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+Connecticus|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+Connecticus|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+Connecticus|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+Connecticus|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+Connecticus|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+Connecticus|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+Connecticus|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+Connecticus|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+Connecticus|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+Connecticus|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+Connecticus|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+Connecticus|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+Connecticus|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+Connecticus|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+Connecticus|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+Connecticus|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+Connecticus|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+Connecticus|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+Connecticus|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+Connecticus|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+Connecticus|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+Connecticus|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+Connecticus|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+Connecticus|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+Connecticus|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+Connecticus|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+Connecticus|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+Connecticus|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+Connecticus|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+Connecticus|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+Connecticus|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+Connecticus|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+Connecticus|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+Connecticus|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+Connecticus|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+Connecticus|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+Connecticus|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+Connecticus|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+Connecticus|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+Connecticus|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+Connecticus|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+Connecticus|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+Connecticus|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+Connecticus|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+Connecticus|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+AlgoQuant|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+AlgoQuant|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+AlgoQuant|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+AlgoQuant|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+AlgoQuant|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+AlgoQuant|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+AlgoQuant|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+AlgoQuant|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+AlgoQuant|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+AlgoQuant|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+AlgoQuant|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+AlgoQuant|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+AlgoQuant|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+AlgoQuant|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+AlgoQuant|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+AlgoQuant|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+AlgoQuant|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+AlgoQuant|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+AlgoQuant|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+AlgoQuant|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+AlgoQuant|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+AlgoQuant|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+AlgoQuant|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+AlgoQuant|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+AlgoQuant|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+AlgoQuant|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+AlgoQuant|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+AlgoQuant|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+AlgoQuant|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+AlgoQuant|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+AlgoQuant|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+AlgoQuant|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+AlgoQuant|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+AlgoQuant|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+AlgoQuant|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+AlgoQuant|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+AlgoQuant|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+AlgoQuant|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+AlgoQuant|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+AlgoQuant|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+AlgoQuant|TECHNICAL|Quant|4|Why can adding 0.1 and 0.2 in binary floating point produce a result different from 0.3, and how would you represent money?|ORIGINAL_PRACTICE||false|Binary representation error; decimal or integer minor units.
+AlgoQuant|TECHNICAL|Quant|3|A fair coin is tossed three times. What is the probability of exactly two heads?|ORIGINAL_PRACTICE||false|Three favorable outcomes out of eight; 3/8.
+AlgoQuant|TECHNICAL|Quant|4|How would you calculate the mean and variance of a stream without storing every observation?|ORIGINAL_PRACTICE||false|Online mean and Welford variance; constant space.
+AlgoQuant|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+AlgoQuant|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+AlgoQuant|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+AlgoQuant|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+AlgoQuant|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+AlgoQuant|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+AlgoQuant|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+AlgoQuant|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+AlgoQuant|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+TCS Ninja|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+TCS Ninja|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+TCS Ninja|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+TCS Ninja|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+TCS Ninja|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+TCS Ninja|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+TCS Ninja|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+TCS Ninja|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+TCS Ninja|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+TCS Digital|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+TCS Digital|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+TCS Digital|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+TCS Digital|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+TCS Digital|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+TCS Digital|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+TCS Digital|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+TCS Digital|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+TCS Digital|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+TCS Prime|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+TCS Prime|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+TCS Prime|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+TCS Prime|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+TCS Prime|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+TCS Prime|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+TCS Prime|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+TCS Prime|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+TCS Prime|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+HCLTech|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+HCLTech|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+HCLTech|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+HCLTech|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+HCLTech|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+HCLTech|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+HCLTech|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+HCLTech|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+HCLTech|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+Infosys|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+Infosys|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+Infosys|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+Infosys|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+Infosys|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+Infosys|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+Infosys|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+Infosys|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+Infosys|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+Cognizant|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+Cognizant|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+Cognizant|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+Cognizant|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+Cognizant|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+Cognizant|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+Cognizant|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+Cognizant|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+Cognizant|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+Connecticus|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+Connecticus|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+Connecticus|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+Connecticus|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+Connecticus|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+Connecticus|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+Connecticus|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+Connecticus|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+Connecticus|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+AlgoQuant|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+AlgoQuant|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+AlgoQuant|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+AlgoQuant|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+AlgoQuant|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+AlgoQuant|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+AlgoQuant|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+AlgoQuant|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+AlgoQuant|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+TCS Ninja|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+TCS Ninja|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+TCS Ninja|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+TCS Ninja|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+TCS Ninja|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+TCS Ninja|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+TCS Ninja|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+TCS Ninja|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+TCS Ninja|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+TCS Ninja|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+TCS Ninja|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+TCS Ninja|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+TCS Ninja|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+TCS Ninja|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+TCS Ninja|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+TCS Digital|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+TCS Digital|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+TCS Digital|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+TCS Digital|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+TCS Digital|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+TCS Digital|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+TCS Digital|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+TCS Digital|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+TCS Digital|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+TCS Digital|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+TCS Digital|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+TCS Digital|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+TCS Digital|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+TCS Digital|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+TCS Digital|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+TCS Digital|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+TCS Digital|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+TCS Digital|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+TCS Prime|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+TCS Prime|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+TCS Prime|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+TCS Prime|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+TCS Prime|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+TCS Prime|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+TCS Prime|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+TCS Prime|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+TCS Prime|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+TCS Prime|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+TCS Prime|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+TCS Prime|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+TCS Prime|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+TCS Prime|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+TCS Prime|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+TCS Prime|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+TCS Prime|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+TCS Prime|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+HCLTech|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+HCLTech|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+HCLTech|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+HCLTech|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+HCLTech|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+HCLTech|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+HCLTech|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+HCLTech|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+HCLTech|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+HCLTech|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+HCLTech|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+HCLTech|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+HCLTech|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+HCLTech|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+HCLTech|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+HCLTech|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+HCLTech|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+HCLTech|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+Infosys|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+Infosys|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+Infosys|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+Infosys|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+Infosys|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+Infosys|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+Infosys|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+Infosys|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+Infosys|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+Infosys|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+Infosys|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+Infosys|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+Infosys|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+Infosys|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+Infosys|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+Infosys|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+Infosys|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+Infosys|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+Cognizant|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+Cognizant|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+Cognizant|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+Cognizant|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+Cognizant|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+Cognizant|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+Cognizant|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+Cognizant|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+Cognizant|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+Cognizant|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+Cognizant|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+Cognizant|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+Cognizant|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+Cognizant|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+Cognizant|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+Cognizant|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+Cognizant|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+Cognizant|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+Connecticus|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+Connecticus|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+Connecticus|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+Connecticus|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+Connecticus|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+Connecticus|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+Connecticus|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+Connecticus|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+Connecticus|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+Connecticus|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+Connecticus|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+Connecticus|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+Connecticus|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+Connecticus|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+Connecticus|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+Connecticus|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+Connecticus|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+Connecticus|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+AlgoQuant|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+AlgoQuant|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+AlgoQuant|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+AlgoQuant|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+AlgoQuant|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+AlgoQuant|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+AlgoQuant|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+AlgoQuant|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+AlgoQuant|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+AlgoQuant|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+AlgoQuant|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+AlgoQuant|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+AlgoQuant|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+AlgoQuant|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+AlgoQuant|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+AlgoQuant|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+AlgoQuant|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+AlgoQuant|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+AlgoQuant|TECHNICAL|Quant|4|An investment loses 20 percent then gains 20 percent. What is the net percentage change?|ORIGINAL_PRACTICE||false|0.8 times 1.2 equals 0.96; loss of 4 percent.
+AlgoQuant|TECHNICAL|Quant|4|Two independent events have probabilities 0.3 and 0.4. What is the probability that at least one occurs?|ORIGINAL_PRACTICE||false|1 minus 0.7 times 0.6 equals 0.58.

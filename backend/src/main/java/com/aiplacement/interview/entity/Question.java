@@ -37,5 +37,7 @@ public class Question {
     private String origin;
     @Column(length = 1000)
     private String sourceUrl;
+    @Column(length = 2000)
+    private String rubric;
     private boolean approved; // Faculty must approve before it enters rotation
 }
