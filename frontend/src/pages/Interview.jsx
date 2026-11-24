@@ -5,7 +5,8 @@ import api from '../api/axios.js'
 export default function Interview() {
   const { sessionId } = useParams()
   const navigate = useNavigate()
-  const [current, setCurrent] = useState(() => JSON.parse(sessionStorage.getItem('currentQuestion')))
+  const [current, setCurrent] = useState(() => (() => { const q = JSON.parse(sessionStorage.getItem('currentQuestion')); return q?.sessionId === Number(sessionId) ? q : null })())
+  const [error, setError] = useState('')
   const [answer, setAnswer] = useState('')
   const [lastFeedback, setLastFeedback] = useState(null)
   const [questionCount, setQuestionCount] = useState(1)
@@ -17,7 +18,7 @@ export default function Interview() {
   async function handleSubmit(e) {
     e.preventDefault()
     if (!answer.trim()) return
-    setSubmitting(true)
+    setSubmitting(true); setError('')
     try {
       const res = await api.post('/interview/answer', {
         sessionId: Number(sessionId),
@@ -27,9 +28,10 @@ export default function Interview() {
       setLastFeedback({ score: res.data.lastScore, feedback: res.data.lastFeedback, wasFollowUp: res.data.wasFollowUp })
       if (res.data.finished) { navigate(`/report/${sessionId}`); return }
       setCurrent(res.data)
+      sessionStorage.setItem('currentQuestion', JSON.stringify(res.data))
       setAnswer('')
       setQuestionCount(n => n + 1)
-    } finally { setSubmitting(false) }
+    } catch (err) { setError(err.response?.data?.error || 'Evaluation failed. Try again.') } finally { setSubmitting(false) }
   }
 
   if (!current) return (
@@ -84,6 +86,8 @@ export default function Interview() {
             </div>
         )}
 
+        {error && <p role="alert">{error}</p>}
+        <p style={{fontSize:12, marginBottom:8}}>{current.stage} · {current.origin === 'PUBLIC_REPORT_INSPIRED' ? 'Public report inspired' : 'Original practice'} {current.sourceUrl && <a href={current.sourceUrl} target="_blank" rel="noreferrer">Source</a>}</p>
         {/* Question card */}
         <div className="card" style={{ padding: '24px 28px', marginBottom: 16 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
