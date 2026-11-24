@@ -16,6 +16,8 @@ const STATUS_STYLE = {
 export default function History() {
     const [sessions, setSessions] = useState(null)
     const [error, setError] = useState('')
+    const [search,setSearch]=useState('')
+    const [statusFilter,setStatusFilter]=useState('ALL')
 
     useEffect(() => {
         api.get('/interview/history')
@@ -37,6 +39,7 @@ export default function History() {
                 <p style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Every mock interview you've taken, most recent first.</p>
             </div>
 
+            <div style={{display:"flex",gap:12,marginBottom:16,flexWrap:"wrap"}}><input className="input" placeholder="Search company" value={search} onChange={e=>setSearch(e.target.value)}/><select className="input" value={statusFilter} onChange={e=>setStatusFilter(e.target.value)}><option value="ALL">All statuses</option><option value="COMPLETED">Completed</option><option value="IN_PROGRESS">In progress</option><option value="ABANDONED">Abandoned</option></select></div>
             {sessions.length === 0 && (
                 <div className="card" style={{ padding: 32, textAlign: 'center' }}>
                     <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16 }}>No interviews yet.</p>
@@ -45,7 +48,7 @@ export default function History() {
             )}
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {sessions.map(s => {
+                {sessions.filter(s=>s.company.toLowerCase().includes(search.toLowerCase())&&(statusFilter==="ALL"||s.status===statusFilter)).map(s => {
                     const status = STATUS_STYLE[s.status] ?? { label: s.status, color: 'var(--text-muted)' }
                     return (
                         <div key={s.sessionId} className="card" style={{ padding: 16, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
@@ -67,6 +70,7 @@ export default function History() {
                                         <p style={{ fontSize: 11, color: 'var(--text-muted)' }}>{s.readinessPercent}% practice score</p>
                                     </div>
                                 )}
+                                {s.status === 'IN_PROGRESS' && <Link className="btn-primary" to={`/interview/${s.sessionId}`}>Resume</Link>}
                                 {s.status === 'COMPLETED' && (
                                     <Link to={`/report/${s.sessionId}`} className="btn-ghost" style={{ textDecoration: 'none', padding: '8px 16px', fontSize: 13 }}>
                                         View Report

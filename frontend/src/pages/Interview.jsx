@@ -8,35 +8,46 @@ export default function Interview() {
   const [current, setCurrent] = useState(() => (() => { const q = JSON.parse(sessionStorage.getItem('currentQuestion')); return q?.sessionId === Number(sessionId) ? q : null })())
   const [error, setError] = useState('')
   const [answer, setAnswer] = useState('')
+  const [meta,setMeta]=useState(null)
+  const [seconds,setSeconds]=useState(0)
+  const busy=useRef(false)
+  const draftKey=current ? `draft:${sessionId}:${current.nextQuestionId}` : null
+  useEffect(()=>{ let alive=true; api.get(`/interview/session/${sessionId}`).then(({data})=>{if(!alive)return; if(data.status==='COMPLETED'){navigate(`/report/${sessionId}`);return} setMeta(data);setCurrent(data.question||null);setQuestionCount(data.questionNumber);sessionStorage.setItem('interviewMode',data.mode)}).catch(e=>{if(alive)setError(e.response?.data?.error||'Unable to restore interview')});return()=>{alive=false}},[sessionId,navigate])
+  useEffect(()=>{if(draftKey)setAnswer(sessionStorage.getItem(draftKey)||'')},[draftKey])
+  useEffect(()=>{if(!meta)return;const tick=()=>setSeconds(Math.max(0,Math.floor((Date.now()-new Date(meta.startedAt).getTime())/1000)));tick();const id=setInterval(tick,1000);return()=>clearInterval(id)},[meta])
   const [lastFeedback, setLastFeedback] = useState(null)
-  const [questionCount, setQuestionCount] = useState(1)
+  const [questionCount, setQuestionCount] = useState(() => Number(sessionStorage.getItem(`questionCount:${sessionId}`)) || 1)
   const [submitting, setSubmitting] = useState(false)
   const textareaRef = useRef(null)
 
   useEffect(() => { textareaRef.current?.focus() }, [current])
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e, skip=false) {
     e.preventDefault()
-    if (!answer.trim()) return
+    if (busy.current || !meta || (!skip && !answer.trim())) return
+    busy.current=true
     setSubmitting(true); setError('')
     try {
       const res = await api.post('/interview/answer', {
         sessionId: Number(sessionId),
         questionId: current.nextQuestionId,
-        answerText: answer,
+        answerText: skip ? "[SKIPPED]" : answer,
       })
+      sessionStorage.removeItem(draftKey)
       setLastFeedback({ score: res.data.lastScore, feedback: res.data.lastFeedback, wasFollowUp: res.data.wasFollowUp })
-      if (res.data.finished) { navigate(`/report/${sessionId}`); return }
+      if (res.data.finished) { sessionStorage.removeItem(`questionCount:${sessionId}`); sessionStorage.removeItem("currentQuestion"); navigate(`/report/${sessionId}`); return }
       setCurrent(res.data)
       sessionStorage.setItem('currentQuestion', JSON.stringify(res.data))
       setAnswer('')
       setQuestionCount(n => n + 1)
-    } catch (err) { setError(err.response?.data?.error || 'Evaluation failed. Try again.') } finally { setSubmitting(false) }
+      sessionStorage.setItem(`questionCount:${sessionId}`, String(questionCount + 1))
+    } catch (err) { setError(err.response?.data?.error || 'Evaluation failed. Try again.') } finally { busy.current=false; setSubmitting(false) }
   }
 
-  if (!current) return (
+  async function endInterview(){if(busy.current||!window.confirm("End this interview and view your results?"))return;busy.current=true;setSubmitting(true);try{await api.post(`/interview/end/${sessionId}`);if(draftKey)sessionStorage.removeItem(draftKey);sessionStorage.removeItem("currentQuestion");navigate(`/report/${sessionId}`)}catch(e){setError(e.response?.data?.error||"Could not end interview")}finally{busy.current=false;setSubmitting(false)}}
+  if (!current || !meta) return (
       <div style={{ textAlign: 'center', padding: 60 }}>
-        <p style={{ color: 'var(--text-muted)' }}>No active session. Go back to the dashboard.</p>
+        <p style={{ color: 'var(--text-muted)' }}>{error || "Restoring interview…"}</p>
       </div>
   )
 
@@ -47,7 +58,7 @@ export default function Interview() {
         {/* Session bar */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>Question {questionCount}</span>
+            <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>Question {questionCount}/{meta.maxQuestions} · {current.stage || "Practice"}</span>
             <div style={{ width: 1, height: 12, background: 'var(--border)' }} />
             <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>
             {current.nextQuestionTopic}
@@ -64,8 +75,10 @@ export default function Interview() {
           </div>
         </div>
 
+        <div className="card" style={{padding:16,marginBottom:20,display:'flex',justifyContent:'space-between',alignItems:'center',gap:12,flexWrap:'wrap'}}><span>Elapsed: {Math.floor(seconds/60)}:{String(seconds%60).padStart(2,'0')}</span><button className="btn-ghost" disabled={submitting} onClick={endInterview}>End interview</button></div>
+        <progress style={{width:'100%',marginBottom:16}} value={questionCount-1} max={meta.maxQuestions}/>
         {/* Feedback from previous answer */}
-        {lastFeedback && (
+        {lastFeedback && sessionStorage.getItem("interviewMode") !== "SIMULATION" && (
             <div style={{
               background: lastFeedback.score >= 6 ? 'var(--green-dim)' : 'var(--amber-dim)',
               border: `1px solid ${lastFeedback.score >= 6 ? 'var(--green)44' : 'var(--amber)44'}`,
@@ -110,13 +123,16 @@ export default function Interview() {
             style={{ height: 160, resize: 'vertical', borderRadius: 10, padding: '14px 16px', fontSize: 14, lineHeight: 1.7, marginBottom: 12 }}
             placeholder="Type your answer here... Be specific, use examples, mention time/space complexity where relevant."
             value={answer}
-            onChange={e => setAnswer(e.target.value)}
+            onChange={e => {setAnswer(e.target.value);sessionStorage.setItem(draftKey,e.target.value)}}
+            maxLength={4000}
+            disabled={submitting}
             required
         />
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <button className="btn-primary" type="submit" disabled={submitting || !answer.trim()} style={{ padding: '11px 24px' }}>
               {submitting ? 'Evaluating...' : 'Submit Answer'}
             </button>
+            <button type="button" className="btn-ghost" disabled={submitting} onClick={e=>handleSubmit(e,true)}>Skip question</button>
             <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>
             {answer.split(/\s+/).filter(Boolean).length} words
           </span>
