@@ -1,49 +1,6 @@
-
-# Java / Maven
-
+node_modules/
+dist/
 backend/target/
-*.class
-*.jar
-*.war
-*.ear
-
-# Maven wrapper logs
-.mvn/wrapper/maven-wrapper.jar
-
-
-# Node / React
-
-frontend/node_modules/
-frontend/dist/
-frontend/.vite/
-
-
-# IDE
-
-.vscode/
-.idea/
-*.iml
-
-
-# OS
-
-.DS_Store
-Thumbs.db
-
-
-# Logs
-
-*.log
-logs/
-
-
-# Environment Variables
-
 .env
-.env.*
-
-
-# Temporary Files
-
-*.tmp
-*.swp
+.env.local
+*.zip
