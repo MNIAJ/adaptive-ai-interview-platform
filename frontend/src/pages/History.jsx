@@ -33,17 +33,17 @@ export default function History() {
     )
 
     return (
-        <div style={{ maxWidth: 820, margin: '0 auto' }}>
+        <div className="premium-history" style={{ maxWidth: 1000, margin: '0 auto' }}>
             <div style={{ marginBottom: 28 }}>
                 <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 4 }}>Interview History</h1>
                 <p style={{ color: 'var(--text-secondary)', fontSize: 14 }}>Every mock interview you've taken, most recent first.</p>
             </div>
 
-            <div style={{display:"flex",gap:12,marginBottom:16,flexWrap:"wrap"}}><input className="input" placeholder="Search company" value={search} onChange={e=>setSearch(e.target.value)}/><select className="input" value={statusFilter} onChange={e=>setStatusFilter(e.target.value)}><option value="ALL">All statuses</option><option value="COMPLETED">Completed</option><option value="IN_PROGRESS">In progress</option><option value="ABANDONED">Abandoned</option></select></div>
+            <div className="history-filters"><input className="input" placeholder="Search company" value={search} onChange={e=>setSearch(e.target.value)}/><select className="input" value={statusFilter} onChange={e=>setStatusFilter(e.target.value)}><option value="ALL">All statuses</option><option value="COMPLETED">Completed</option><option value="IN_PROGRESS">In progress</option><option value="ABANDONED">Abandoned</option></select></div>
             {sessions.length === 0 && (
                 <div className="card" style={{ padding: 32, textAlign: 'center' }}>
                     <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16 }}>No interviews yet.</p>
-                    <Link to="/" className="btn-primary" style={{ textDecoration: 'none', padding: '10px 20px' }}>Start your first interview</Link>
+                    <Link to="/new-interview" className="btn-primary" style={{ textDecoration: 'none', padding: '10px 20px' }}>Start your first interview</Link>
                 </div>
             )}
 
