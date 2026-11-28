@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import api from '../api/axios.js'
+import PracticalRound from '../components/PracticalRound.jsx'
+import VoiceInterviewer from '../components/VoiceInterviewer.jsx'
 
 export default function Interview() {
   const { sessionId } = useParams()
@@ -11,6 +13,9 @@ export default function Interview() {
   const [meta,setMeta]=useState(null)
   const [seconds,setSeconds]=useState(0)
   const busy=useRef(false)
+  const answerRef=useRef('')
+  answerRef.current=answer
+  function updateAnswer(value){answerRef.current=value.slice(0,4000);setAnswer(answerRef.current);if(draftKey)sessionStorage.setItem(draftKey,answerRef.current)}
   const draftKey=current ? `draft:${sessionId}:${current.nextQuestionId}` : null
   useEffect(()=>{ let alive=true; api.get(`/interview/session/${sessionId}`).then(({data})=>{if(!alive)return; if(data.status==='COMPLETED'){navigate(`/report/${sessionId}`);return} setMeta(data);setCurrent(data.question||null);setQuestionCount(data.questionNumber);sessionStorage.setItem('interviewMode',data.mode)}).catch(e=>{if(alive)setError(e.response?.data?.error||'Unable to restore interview')});return()=>{alive=false}},[sessionId,navigate])
   useEffect(()=>{if(draftKey)setAnswer(sessionStorage.getItem(draftKey)||'')},[draftKey])
@@ -22,16 +27,17 @@ export default function Interview() {
 
   useEffect(() => { textareaRef.current?.focus() }, [current])
 
-  async function handleSubmit(e, skip=false) {
+  async function handleSubmit(e, skip=false, practicalAnswer=null) {
     e.preventDefault()
-    if (busy.current || !meta || (!skip && !answer.trim())) return
+    if (busy.current || !meta || (!skip && !(practicalAnswer?.code || answer).trim())) return
     busy.current=true
     setSubmitting(true); setError('')
     try {
       const res = await api.post('/interview/answer', {
         sessionId: Number(sessionId),
         questionId: current.nextQuestionId,
-        answerText: skip ? "[SKIPPED]" : answer,
+        answerText: skip ? "[SKIPPED]" : practicalAnswer?.code ?? answer,
+        languageId: practicalAnswer?.languageId,
       })
       sessionStorage.removeItem(draftKey)
       setLastFeedback({ score: res.data.lastScore, feedback: res.data.lastFeedback, wasFollowUp: res.data.wasFollowUp })
@@ -54,7 +60,7 @@ export default function Interview() {
   const difficulty = current.currentDifficulty || 3
 
   return (
-      <div style={{ maxWidth: 760, margin: '0 auto' }}>
+      <div className="premium-interview" style={{ maxWidth: 1240, margin: '0 auto' }}>
         {/* Session bar */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -101,12 +107,14 @@ export default function Interview() {
 
         {error && <p role="alert">{error}</p>}
         <p style={{fontSize:12, marginBottom:8}}>{current.stage} · {current.origin === 'PUBLIC_REPORT_INSPIRED' ? 'Public report inspired' : 'Original practice'} {current.sourceUrl && <a href={current.sourceUrl} target="_blank" rel="noreferrer">Source</a>}</p>
+        {current.stage?.startsWith("PRACTICAL_") ? <PracticalRound key={current.nextQuestionId} current={current} sessionId={sessionId} disabled={submitting} onSubmit={(e,code,languageId)=>handleSubmit(e,false,{code,languageId})} onSkip={e=>handleSubmit(e,true)}/> : <div className="interview-workspace"><VoiceInterviewer questionId={current.nextQuestionId} question={current.nextQuestionText} number={questionCount} total={meta.maxQuestions} company={sessionStorage.getItem(`company:${sessionId}`)} disabled={submitting} onTranscript={text=>updateAnswer((answerRef.current+' '+text).trim())}/>
+        <div className="interview-answer">
         {/* Question card */}
         <div className="card" style={{ padding: '24px 28px', marginBottom: 16 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
           <span style={{
             background: 'var(--accent-dim)', color: 'var(--accent)',
-            border: '1px solid var(--accent)44', borderRadius: 6,
+            border: '1px solid var(--border)', borderRadius: 6,
             padding: '3px 10px', fontSize: 11, fontWeight: 600
           }}>{current.nextQuestionTopic}</span>
           </div>
@@ -123,7 +131,7 @@ export default function Interview() {
             style={{ height: 160, resize: 'vertical', borderRadius: 10, padding: '14px 16px', fontSize: 14, lineHeight: 1.7, marginBottom: 12 }}
             placeholder="Type your answer here... Be specific, use examples, mention time/space complexity where relevant."
             value={answer}
-            onChange={e => {setAnswer(e.target.value);sessionStorage.setItem(draftKey,e.target.value)}}
+            onChange={e => updateAnswer(e.target.value)}
             maxLength={4000}
             disabled={submitting}
             required
@@ -137,7 +145,7 @@ export default function Interview() {
             {answer.split(/\s+/).filter(Boolean).length} words
           </span>
           </div>
-        </form>
+        </form></div></div>}
       </div>
   )
 }
