@@ -609,3 +609,218 @@ AlgoQuant|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, 
 AlgoQuant|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
 AlgoQuant|TECHNICAL|Quant|4|An investment loses 20 percent then gains 20 percent. What is the net percentage change?|ORIGINAL_PRACTICE||false|0.8 times 1.2 equals 0.96; loss of 4 percent.
 AlgoQuant|TECHNICAL|Quant|4|Two independent events have probabilities 0.3 and 0.4. What is the probability that at least one occurs?|ORIGINAL_PRACTICE||false|1 minus 0.7 times 0.6 equals 0.58.
+AlgoQuant|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+AlgoQuant|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+AlgoQuant|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+AlgoQuant|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+AlgoQuant|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+AlgoQuant|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+AlgoQuant|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+AlgoQuant|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+AlgoQuant|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+AlgoQuant|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+AlgoQuant|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+AlgoQuant|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+AlgoQuant|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+AlgoQuant|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+Cognizant|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+Cognizant|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+Cognizant|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+Cognizant|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+Cognizant|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+Cognizant|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+Cognizant|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+Cognizant|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+Cognizant|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+Cognizant|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+Cognizant|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+Cognizant|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+Cognizant|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+Cognizant|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+Connecticus|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+Connecticus|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+Connecticus|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+Connecticus|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+Connecticus|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+Connecticus|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+Connecticus|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+Connecticus|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+Connecticus|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+Connecticus|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+Connecticus|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+Connecticus|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+Connecticus|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+Connecticus|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+HCLTech|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+HCLTech|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+HCLTech|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+HCLTech|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+HCLTech|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+HCLTech|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+HCLTech|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+HCLTech|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+HCLTech|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+HCLTech|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+HCLTech|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+HCLTech|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+HCLTech|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+HCLTech|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+Infosys|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+Infosys|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+Infosys|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+Infosys|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+Infosys|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+Infosys|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+Infosys|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+Infosys|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+Infosys|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+Infosys|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+Infosys|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+Infosys|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+Infosys|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+Infosys|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+TCS Digital|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+TCS Digital|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+TCS Digital|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+TCS Digital|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+TCS Digital|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+TCS Digital|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+TCS Digital|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+TCS Digital|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+TCS Digital|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+TCS Digital|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+TCS Digital|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+TCS Digital|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+TCS Digital|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+TCS Digital|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+TCS Ninja|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+TCS Ninja|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+TCS Ninja|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+TCS Ninja|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+TCS Ninja|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+TCS Ninja|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+TCS Ninja|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+TCS Ninja|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+TCS Ninja|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+TCS Ninja|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+TCS Ninja|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+TCS Ninja|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+TCS Ninja|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+TCS Ninja|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+TCS Prime|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+TCS Prime|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+TCS Prime|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+TCS Prime|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+TCS Prime|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+TCS Prime|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+TCS Prime|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+TCS Prime|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+TCS Prime|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+TCS Prime|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+TCS Prime|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+TCS Prime|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+TCS Prime|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+TCS Prime|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+Centiro|TECHNICAL|DSA|2|Given an array of integers and a target, how would you find two distinct indices whose values sum to the target?|ORIGINAL_PRACTICE||false|Hash map of seen values; complement lookup; O(n) time and space.
+Centiro|TECHNICAL|DSA|2|Given a string containing only parentheses, brackets and braces, determine whether every opening symbol is closed in the correct order.|ORIGINAL_PRACTICE||false|Stack; matching closing symbol; reject leftover openings.
+Centiro|TECHNICAL|DSA|3|Given a singly linked list, how can you determine whether it contains a cycle using constant extra space?|ORIGINAL_PRACTICE||false|Floyd slow and fast pointers; meeting implies cycle.
+Centiro|TECHNICAL|DSA|3|Given an array containing negative and positive integers, find the maximum sum of a nonempty contiguous subarray.|ORIGINAL_PRACTICE||false|Kadane recurrence; initialize from first element; O(n).
+Centiro|TECHNICAL|DSA|3|Given a sorted array rotated at an unknown pivot with distinct values, find a target in logarithmic time.|ORIGINAL_PRACTICE||false|Binary search; identify sorted half; narrow bounds.
+Centiro|TECHNICAL|DSA|4|Given a directed graph of course prerequisites, return a valid course order or explain why none exists.|ORIGINAL_PRACTICE||false|Topological sort; indegrees or DFS; cycle detection.
+Centiro|TECHNICAL|DSA|4|Design a cache supporting get and put in constant time with least recently used eviction.|ORIGINAL_PRACTICE||false|Hash map and doubly linked list; move on access; evict tail.
+Centiro|TECHNICAL|DSA|3|Given a string, find the length of its longest substring without repeated characters.|ORIGINAL_PRACTICE||false|Sliding window; last seen indices; O(n).
+Centiro|TECHNICAL|DSA|4|Given coin denominations and a target amount, find the minimum number of coins needed or report impossibility.|ORIGINAL_PRACTICE||false|DP over amounts; unreachable sentinel; unbounded transitions.
+Centiro|TECHNICAL|DSA|3|Given a list of closed intervals, merge all overlapping intervals.|ORIGINAL_PRACTICE||false|Sort by start; extend current end; O(n log n).
+Centiro|TECHNICAL|DSA|3|Given an unweighted graph, find the shortest path from vertex A to vertex B.|ORIGINAL_PRACTICE||false|BFS; visited set; parent reconstruction.
+Centiro|TECHNICAL|DSA|4|Numbers arrive one at a time. How would you maintain their median after every insertion?|ORIGINAL_PRACTICE||false|Two heaps; balance sizes; median from roots.
+Centiro|TECHNICAL|SQL|2|Employees(id, name, salary, department_id) stores employee records. Write a query to return the second highest distinct salary.|ORIGINAL_PRACTICE||false|DISTINCT with ordering and offset or MAX below maximum; handle missing result.
+Centiro|TECHNICAL|SQL|3|Customers(id, name) and Orders(id, customer_id) are tables. Write a query returning customers who have never placed an order.|ORIGINAL_PRACTICE||false|NOT EXISTS or LEFT JOIN with null order id.
+Centiro|TECHNICAL|SQL|3|Employees(id, department_id, salary) stores salaries. Return employees earning more than their own department average.|ORIGINAL_PRACTICE||false|Correlated subquery or window AVG partitioned by department.
+Centiro|TECHNICAL|SQL|3|Orders(id, customer_id, amount) stores orders. Return customers whose total spending exceeds 10000.|ORIGINAL_PRACTICE||false|GROUP BY customer_id; SUM; HAVING.
+Centiro|TECHNICAL|SQL|4|Employees(id, department_id, salary) stores salaries. Return the three highest distinct salary ranks in each department, including ties.|ORIGINAL_PRACTICE||false|DENSE_RANK partition by department order by salary descending; filter rank.
+Centiro|TECHNICAL|DBMS|3|Two transactions read the same account balance and both update it. How can a lost update occur and how would you prevent it?|ORIGINAL_PRACTICE||false|Read-modify-write race; atomic update, locking or serializable isolation.
+Centiro|TECHNICAL|DBMS|3|A query searches a million-row user table by email. What index would you create and how would you verify it helps?|ORIGINAL_PRACTICE||false|B-tree on email; EXPLAIN ANALYZE; selectivity and write overhead.
+Centiro|TECHNICAL|DBMS|2|An order table repeats customer addresses in every row. What anomalies can occur and how would normalization help?|ORIGINAL_PRACTICE||false|Update, insertion and deletion anomalies; separate customer relation and foreign key.
+Centiro|TECHNICAL|OOP|2|In Java, when would you choose an interface rather than an abstract class? Give a concrete example.|ORIGINAL_PRACTICE||false|Contract and multiple interfaces versus shared state and implementation.
+Centiro|TECHNICAL|OOP|2|A superclass reference points to a subclass object that overrides a method. Which implementation runs in Java and why?|ORIGINAL_PRACTICE||false|Runtime dispatch for overridden instance methods.
+Centiro|TECHNICAL|OOP|3|How would you design a payment feature supporting cards and UPI without changing checkout code for every new payment method?|ORIGINAL_PRACTICE||false|Strategy interface; implementations; dependency injection.
+Centiro|TECHNICAL|OS|3|Two threads acquire locks A and B in opposite order. Explain how deadlock can occur and how to prevent it.|ORIGINAL_PRACTICE||false|Circular wait; consistent lock ordering; release or timeout.
+Centiro|TECHNICAL|OS|2|What resources are shared by threads in one process, and what resources are private to each thread?|ORIGINAL_PRACTICE||false|Address space and heap shared; stack and registers private.
+Centiro|TECHNICAL|OS|3|A program accesses a virtual page not currently in RAM. What happens next?|ORIGINAL_PRACTICE||false|Page fault; OS validates access; loads page; updates page table.
+Centiro|TECHNICAL|Networks|2|Describe what happens from entering an HTTPS URL in a browser until the first response arrives.|ORIGINAL_PRACTICE||false|DNS; connection; TLS; HTTP request and response.
+Centiro|TECHNICAL|Networks|3|Why might a video call use UDP while a file download uses TCP?|ORIGINAL_PRACTICE||false|Latency versus reliable ordered delivery; application tradeoffs.
+Centiro|TECHNICAL|Networks|3|A client receives HTTP 502 from a reverse proxy. What would you investigate first?|ORIGINAL_PRACTICE||false|Upstream availability, connectivity, logs and timeouts.
+Centiro|TECHNICAL|Java|3|How does Java HashMap handle two unequal keys with the same hash code?|ORIGINAL_PRACTICE||false|Bucket collision; equals; list/tree bins; resize considerations.
+Centiro|TECHNICAL|Java|2|Why should a mutable object generally not be used as a HashMap key?|ORIGINAL_PRACTICE||false|Hash or equality changes break lookup consistency.
+Centiro|TECHNICAL|Java|3|What is the difference between checked and unchecked exceptions? Give an example of each.|ORIGINAL_PRACTICE||false|Compile-time handling requirement; IOException versus runtime exceptions.
+Centiro|TECHNICAL|Python|2|Why does modifying a list assigned to another variable also affect the original variable?|ORIGINAL_PRACTICE||false|Both references point to same mutable object; copying alternatives.
+Centiro|TECHNICAL|Python|3|When would a generator be preferable to returning a list of all results?|ORIGINAL_PRACTICE||false|Lazy iteration; reduced memory; single-pass tradeoffs.
+Centiro|TECHNICAL|JavaScript|3|Why does a promise callback run after synchronous code even if the promise is already resolved?|ORIGINAL_PRACTICE||false|Event loop; microtask queue; call stack.
+Centiro|TECHNICAL|JavaScript|2|What is the difference between let, const and var in JavaScript?|ORIGINAL_PRACTICE||false|Block versus function scope; reassignment; hoisting and TDZ.
+Centiro|TECHNICAL|System Design|4|Design an API that prevents a payment from being charged twice when a client retries after a timeout.|ORIGINAL_PRACTICE||false|Idempotency key; atomic unique record; replay result.
+Centiro|TECHNICAL|System Design|3|A public API must allow at most 100 requests per user per minute. How would you enforce this across multiple servers?|ORIGINAL_PRACTICE||false|Shared counter or token bucket; atomic updates; expiry; 429.
+Centiro|TECHNICAL|System Design|4|Design a URL shortener supporting redirects and expiration. What data would you store and how would you handle collisions?|ORIGINAL_PRACTICE||false|Unique short key; mapping; expiry; collision retry; caching.
+Centiro|TECHNICAL|System Design|3|A background job may fail after partially completing its work. How would you make retries safe?|ORIGINAL_PRACTICE||false|Idempotent operations; checkpoints; bounded retries and dead-letter queue.
+Centiro|INTRO|Communication|1|Introduce yourself in about one minute, focusing on your education, technical interests and a project you are proud of.|ORIGINAL_PRACTICE||false|Relevant concise introduction; concrete experience; clear structure.
+Centiro|PROJECT|Projects|2|Choose one project you built. What problem did it solve, what was your contribution and how did you verify it worked?|ORIGINAL_PRACTICE||false|Problem, ownership, implementation and evidence.
+Centiro|PROJECT|Projects|3|Describe a difficult bug in a project you built. How did you reproduce, isolate and fix it?|ORIGINAL_PRACTICE||false|Reproduction; diagnosis; fix; regression test.
+Centiro|PROJECT|Projects|3|Choose a project you built. Why did you select its technology stack, and what alternative did you consider?|ORIGINAL_PRACTICE||false|Concrete tradeoff and project constraints.
+Centiro|HR|Communication|2|Tell me about a time you had to learn a new skill quickly to complete a task. What did you do and what was the outcome?|ORIGINAL_PRACTICE||false|Specific situation, actions, result and learning.
+Centiro|HR|Communication|2|Describe a disagreement in a team project and how you resolved it.|ORIGINAL_PRACTICE||false|Respectful communication; concrete resolution; reflection.
+Centiro|HR|Communication|2|Why are you interested in this role, and which of your skills would help you contribute?|ORIGINAL_PRACTICE||false|Role understanding; relevant evidence; realistic motivation.
+Centiro|MANAGERIAL|Leadership|3|A release is due tomorrow but testing reveals a serious defect. How would you decide whether to delay the release?|ORIGINAL_PRACTICE||false|Assess severity; communicate risk; mitigation; accountable decision.
+Centiro|MANAGERIAL|Leadership|3|Two urgent tasks have conflicting deadlines. How would you prioritize and communicate your decision?|ORIGINAL_PRACTICE||false|Impact, dependencies, stakeholder alignment and clear plan.
+Centiro|PROJECT|Project|3|How did you test your project and what important case remains untested?|ORIGINAL_PRACTICE||false|
+Centiro|PROJECT|Project|3|How would you improve the reliability of your project under increased traffic?|ORIGINAL_PRACTICE||false|
+Centiro|HR|Hr|2|How would you handle a missed deadline in a team project?|ORIGINAL_PRACTICE||false|
+Centiro|HR|Hr|2|How do you prioritize two urgent assignments?|ORIGINAL_PRACTICE||false|
+Centiro|HR|Hr|2|What would you do if a teammate was unable to complete their work?|ORIGINAL_PRACTICE||false|
+Centiro|MANAGERIAL|Managerial|3|A release is due tomorrow but testing reveals a serious defect. How would you decide what to do?|ORIGINAL_PRACTICE||false|
+Centiro|MANAGERIAL|Managerial|3|How would you estimate an unfamiliar task and communicate uncertainty?|ORIGINAL_PRACTICE||false|
+Centiro|MANAGERIAL|Managerial|3|A stakeholder requests a major change late in development. How would you respond?|ORIGINAL_PRACTICE||false|
+Centiro|MANAGERIAL|Managerial|3|How would you investigate a production issue while keeping stakeholders informed?|ORIGINAL_PRACTICE||false|
+Centiro|TECHNICAL|DSA|2|Given a sorted integer array, remove duplicates in place and return the number of distinct values.|ORIGINAL_PRACTICE||false|Two pointers; overwrite next unique value; O(n) time.
+Centiro|TECHNICAL|DSA|2|Given an array of length n containing distinct integers from 0 through n, find the missing integer.|ORIGINAL_PRACTICE||false|XOR or arithmetic sum; avoid overflow.
+Centiro|TECHNICAL|DSA|3|Given an array and integer k, find the k most frequent values.|ORIGINAL_PRACTICE||false|Frequency map; heap or buckets; complexity.
+Centiro|TECHNICAL|DSA|4|Given a grid with blocked cells, count paths from top-left to bottom-right using only right and down moves.|ORIGINAL_PRACTICE||false|DP; blocked cells zero; boundary initialization.
+Centiro|TECHNICAL|DSA|4|Given a weighted graph with nonnegative edges, find distances from a source to all vertices.|ORIGINAL_PRACTICE||false|Dijkstra; priority queue; relaxation; nonnegative requirement.
+Centiro|TECHNICAL|DSA|3|Given a binary tree, determine whether its height is balanced at every node.|ORIGINAL_PRACTICE||false|Postorder heights; detect difference greater than one; O(n).
+Centiro|TECHNICAL|SQL|2|Products(id, category, price) stores products. Return the average price per category, excluding categories with fewer than five products.|ORIGINAL_PRACTICE||false|GROUP BY category; AVG; HAVING COUNT.
+Centiro|TECHNICAL|SQL|3|Orders(id, created_at, amount) stores orders. In PostgreSQL, return total revenue for each calendar month.|ORIGINAL_PRACTICE||false|date_trunc month; SUM; GROUP BY.
+Centiro|TECHNICAL|DBMS|3|A read replica returns an old value immediately after a successful write. Why can this happen and how can the application handle it?|ORIGINAL_PRACTICE||false|Replication lag; primary reads or session consistency.
+Centiro|TECHNICAL|DBMS|3|A foreign key references a customer row that must be deleted. Compare restricting deletion, cascading deletion and setting the foreign key to null.|ORIGINAL_PRACTICE||false|Referential integrity; business semantics; nullable constraint.
+Centiro|TECHNICAL|OS|3|A producer adds items to a bounded queue while a consumer removes them. How would you prevent races and avoid busy waiting?|ORIGINAL_PRACTICE||false|Mutex and condition variables or semaphores; wait on full or empty.
+Centiro|TECHNICAL|OS|2|Why can a CPU-bound task make a single-threaded UI unresponsive, and how would you fix it?|ORIGINAL_PRACTICE||false|Event loop blocked; worker thread; asynchronous results.
+Centiro|TECHNICAL|Networks|3|A browser repeatedly downloads an unchanged image. How can HTTP caching reduce bandwidth while still detecting updates?|ORIGINAL_PRACTICE||false|Cache-Control; ETag; conditional request; 304.
+Centiro|TECHNICAL|Java|3|A Java program opens a file and throws an exception during reading. How can you guarantee that the file is closed?|ORIGINAL_PRACTICE||false|Try-with-resources; AutoCloseable; cleanup on exceptions.
+Centiro|TECHNICAL|Java|2|What is the difference between String and StringBuilder when concatenating text repeatedly in a loop?|ORIGINAL_PRACTICE||false|Immutable strings; mutable builder; allocation overhead.
+Centiro|TECHNICAL|Python|3|Why can a Python function with a default argument of an empty list unexpectedly retain values across calls?|ORIGINAL_PRACTICE||false|Default evaluated once; use None and create list per call.
+Centiro|TECHNICAL|JavaScript|3|A search box sends requests on each keystroke, and an older response overwrites newer results. How would you prevent this?|ORIGINAL_PRACTICE||false|AbortController or request sequence; debounce optional.
+Centiro|TECHNICAL|System Design|4|An API becomes slow when its database connection pool is exhausted. What metrics would you inspect and what changes might help?|ORIGINAL_PRACTICE||false|Pool wait time, query latency, transaction duration; tune based on capacity.
+Centiro|HR|Conflict|2|Describe a disagreement with a teammate and how you resolved it.|ORIGINAL_PRACTICE||false|Specific situation, respectful listening, resolution and learning.
+Centiro|HR|Ownership|2|Tell me about a task you took responsibility for when nobody else volunteered.|ORIGINAL_PRACTICE||false|Initiative, actions and outcome.
+Centiro|HR|Adaptability|2|Describe a time requirements changed late in a project.|ORIGINAL_PRACTICE||false|Prioritisation, communication and adaptation.
+Centiro|HR|Ethics|2|What would you do if a teammate asked you to hide a defect before a demo?|ORIGINAL_PRACTICE||false|Transparency, escalation and constructive response.
+Centiro|HR|Feedback|2|Describe a time you received difficult feedback.|ORIGINAL_PRACTICE||false|Reflection, action and improvement.
+Centiro|HR|Prioritisation|2|How would you handle two urgent deadlines from different managers?|ORIGINAL_PRACTICE||false|Clarify impact, negotiate priorities, communicate.
+Centiro|HR|Learning|2|Tell me about a skill you learned independently under time pressure.|ORIGINAL_PRACTICE||false|Learning strategy, evidence and outcome.
+Centiro|HR|Communication|2|Explain a technical issue to a nontechnical stakeholder.|ORIGINAL_PRACTICE||false|Plain language, impact and next steps.
+Centiro|HR|Resilience|2|Describe a setback and how you recovered.|ORIGINAL_PRACTICE||false|Ownership, realistic actions and learning.
+Centiro|HR|Inclusion|2|How would you encourage a quiet teammate to contribute?|ORIGINAL_PRACTICE||false|Respect, invitation and inclusive collaboration.
+Centiro|HR|Accountability|2|Tell me about a mistake you made and how you corrected it.|ORIGINAL_PRACTICE||false|Honesty, corrective action and prevention.
+Centiro|HR|Career goals|2|What skills do you want to develop in your first year at work?|ORIGINAL_PRACTICE||false|Specific goals and realistic learning plan.
+Centiro|HR|Teamwork|2|Describe how you handled uneven contributions in a group project.|ORIGINAL_PRACTICE||false|Fairness, communication and shared outcome.
+Centiro|HR|Decision making|2|Describe a decision you made with incomplete information.|ORIGINAL_PRACTICE||false|Tradeoffs, evidence and follow-up.
+Centiro|TECHNICAL|AI Literacy|3|What is the difference between supervised and unsupervised learning?|ORIGINAL_PRACTICE||false|Labeled versus unlabeled data; examples of classification and clustering.
+Centiro|TECHNICAL|AI Literacy|3|What is overfitting and how can it be reduced?|ORIGINAL_PRACTICE||false|Generalization gap; validation, regularization, more representative data.
+Centiro|TECHNICAL|AI Literacy|3|What is a hallucination in a generative AI system?|ORIGINAL_PRACTICE||false|Unsupported generated claims; verify against trusted sources.
+Centiro|TECHNICAL|AI Literacy|3|How would you evaluate an AI classifier on imbalanced data?|ORIGINAL_PRACTICE||false|Precision, recall, F1 and appropriate validation; accuracy alone can mislead.
+Centiro|TECHNICAL|AI Literacy|3|Explain the difference between training and inference.|ORIGINAL_PRACTICE||false|Training learns parameters; inference applies learned parameters.
+Centiro|TECHNICAL|AI Literacy|3|What is prompt injection and how can an application mitigate it?|ORIGINAL_PRACTICE||false|Untrusted instructions; isolate data, limit privileges, validate actions.
+Centiro|TECHNICAL|AI Literacy|3|How would you protect customer information when using an AI assistant?|ORIGINAL_PRACTICE||false|Minimize data, redact identifiers, approved tools and access controls.
+Centiro|TECHNICAL|AI Literacy|3|What is retrieval augmented generation?|ORIGINAL_PRACTICE||false|Retrieve relevant evidence and provide it to the model; verify grounding.
+Centiro|TECHNICAL|AI Literacy|3|Why should a developer test AI-generated code before using it?|ORIGINAL_PRACTICE||false|Correctness, security, edge cases and dependency checks.
+Centiro|TECHNICAL|AI Literacy|3|How can biased training data affect a model?|ORIGINAL_PRACTICE||false|Unequal errors and representation; evaluate across relevant groups.
+Centiro|TECHNICAL|System Design|3|How would you handle duplicate shipment events in a tracking service?|ORIGINAL_PRACTICE||false|Idempotency keys, unique constraints and retry-safe processing.
+Centiro|TECHNICAL|SQL|3|How would you query the latest tracking event for each shipment?|ORIGINAL_PRACTICE||false|Window function ROW_NUMBER partitioned by shipment and ordered by timestamp; deterministic tie break.
+Centiro|TECHNICAL|System Design|3|How would you troubleshoot a delayed shipment status update in a distributed system?|ORIGINAL_PRACTICE||false|Trace events, queues, retries, logs and timestamps; isolate bottleneck.
