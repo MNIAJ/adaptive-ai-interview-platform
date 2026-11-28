@@ -37,6 +37,9 @@ public class AdaptiveInterviewEngine {
         AIEvaluationService.EvaluationResult eval =
                 "[SKIPPED]".equals(answerText) ? new AIEvaluationService.EvaluationResult(0,"Question skipped.") : aiEvaluationService.evaluate(currentQuestion.getText() + (currentQuestion.getRubric()==null || currentQuestion.getRubric().isBlank() ? "" : "\nExpected answer criteria: " + currentQuestion.getRubric()), currentQuestion.getTopic(), answerText);
 
+        return recordEvaluation(session,currentQuestion,answerText,eval);
+    }
+    public InterviewQuestionResponse recordEvaluation(InterviewSession session, Question currentQuestion, String answerText, AIEvaluationService.EvaluationResult eval) {
         Response response = Response.builder()
                 .session(session)
                 .question(currentQuestion)

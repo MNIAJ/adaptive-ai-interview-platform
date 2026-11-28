@@ -30,6 +30,8 @@ public class InterviewController {
         return interviewService.submitAnswer(currentEmail(), request);
     }
 
+    @PostMapping("/practical/run")
+    public java.util.Map<String,Object> runPractical(@Valid @RequestBody AnswerRequest request){return interviewService.previewPractical(currentEmail(),request);}
     @GetMapping("/session/{sessionId}")
     public java.util.Map<String,Object> resume(@PathVariable Long sessionId) {
         return interviewService.resumeSession(currentEmail(), sessionId);
