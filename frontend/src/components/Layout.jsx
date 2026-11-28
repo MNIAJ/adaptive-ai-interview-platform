@@ -16,33 +16,14 @@ export default function Layout({ children }) {
   const navigate = useNavigate()
   const location = useLocation()
 
-  const jump = id => {
-    if (location.pathname === '/') document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    else { navigate('/'); setTimeout(() => document.getElementById(id)?.scrollIntoView(), 200) }
-  }
+
   const logout = () => { localStorage.removeItem('token'); sessionStorage.clear(); navigate('/login') }
 
-  return (
-    <div className="app-shell">
-      <header className="topbar">
-        <NavLink to="/" className="wordmark"><span><Glyph type="bolt" /></span> PlacementAI</NavLink>
-        <nav aria-label="Primary">
-          <NavLink to="/" end>Dashboard</NavLink>
-          <button onClick={() => jump('practice')}>Practice</button>
-          <button onClick={() => jump('companies')}>Companies</button>
-          <NavLink to="/history">History</NavLink>
-        </nav>
-        <button className="account-button" onClick={logout} aria-label="Sign out"><span className="account-avatar">ST</span><span>Sign out</span></button>
-      </header>
-      <aside className="side" aria-label="Quick navigation">
-        <button className="gradient-icon" title="Start practice" aria-label="Start practice" onClick={() => jump('practice')}><Glyph type="bolt" /></button>
-        <NavLink to="/" end title="Dashboard" aria-label="Dashboard"><Glyph type="home" /></NavLink>
-        <button title="Companies" aria-label="Companies" onClick={() => jump('companies')}><Glyph type="grid" /></button>
-        <button title="Resume" aria-label="Resume" onClick={() => jump('resume')}><Glyph type="file" /></button>
-        <NavLink to="/history" title="History" aria-label="History"><Glyph type="history" /></NavLink>
-        <button className="side-exit" title="Sign out" aria-label="Sign out" onClick={logout}><Glyph type="exit" /></button>
-      </aside>
-      <main className="workspace">{children}</main>
-    </div>
-  )
+  const interview = location.pathname.startsWith('/interview/')
+  const title = interview ? 'Interview studio' : location.pathname.startsWith('/report/') ? 'Performance report' : location.pathname === '/history' ? 'Interview history' : ({'/new-interview':'New interview','/companies':'Companies','/resume-analysis':'Resume analysis'}[location.pathname] || 'Overview')
+  return <div className={'app-shell premium-shell '+(interview?'focus-shell':'')}>
+    <aside className="premium-sidebar"><NavLink to="/" className="wordmark"><span><Glyph type="bolt" /></span> PlacementAI</NavLink><div className="nav-caption">WORKSPACE</div><nav aria-label="Primary navigation"><NavLink to="/" end><Glyph type="home"/> Overview</NavLink><NavLink to="/new-interview"><Glyph type="bolt"/> New interview</NavLink><NavLink to="/companies"><Glyph type="grid"/> Companies</NavLink><NavLink to="/history"><Glyph type="history"/> Interview history</NavLink><NavLink to="/resume-analysis"><Glyph type="file"/> Resume analysis</NavLink></nav><div className="sidebar-bottom"><span>PLACEMENT WORKSPACE</span><button onClick={logout}><Glyph type="exit"/> Sign out</button></div></aside>
+    <header className="premium-topbar"><div><span className="breadcrumb">Workspace / </span><strong>{title}</strong></div><NavLink to={interview?'/history':'/'} className="header-link">{interview?'Save & leave →':'PlacementAI'}</NavLink></header>
+    <main className="workspace">{children}</main>
+  </div>
 }

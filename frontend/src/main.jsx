@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './index.css'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
+import Overview from './pages/Overview.jsx'
+import Companies from './pages/Companies.jsx'
+import ResumeAnalysis from './pages/ResumeAnalysis.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Interview from './pages/Interview.jsx'
 import Report from './pages/Report.jsx'
@@ -17,7 +20,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/" element={<ProtectedRoute><Layout><Dashboard /></Layout></ProtectedRoute>} />
+                <Route path="/" element={<ProtectedRoute><Layout><Overview /></Layout></ProtectedRoute>} />
+                <Route path="/new-interview" element={<ProtectedRoute><Layout><Dashboard /></Layout></ProtectedRoute>} />
+                <Route path="/companies" element={<ProtectedRoute><Layout><Companies /></Layout></ProtectedRoute>} />
+                <Route path="/resume-analysis" element={<ProtectedRoute><Layout><ResumeAnalysis /></Layout></ProtectedRoute>} />
                 <Route path="/history" element={<ProtectedRoute><Layout><History /></Layout></ProtectedRoute>} />
                 <Route path="/interview/:sessionId" element={<ProtectedRoute><Layout><Interview /></Layout></ProtectedRoute>} />
                 <Route path="/report/:sessionId" element={<ProtectedRoute><Layout><Report /></Layout></ProtectedRoute>} />
