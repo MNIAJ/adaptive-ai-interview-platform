@@ -11,7 +11,11 @@ if (-not $env:JWT_SECRET) {
     }
     $env:JWT_SECRET = (Get-Content -Raw $secretPath).Trim()
 }
-$env:AI_PROVIDER = "springai"
+if (-not $env:AI_PROVIDER) { $env:AI_PROVIDER = "springai" }
+if ($env:AI_PROVIDER -eq "groq" -and -not $env:GROQ_API_KEY) {
+    $secureKey = Read-Host "Enter Groq API key" -AsSecureString
+    $env:GROQ_API_KEY = [System.Net.NetworkCredential]::new("", $secureKey).Password
+}
 $env:OLLAMA_URL = "http://localhost:11434"
 $env:OLLAMA_MODEL = "llama3.2"
 $env:FRONTEND_URL = "http://localhost:5173"

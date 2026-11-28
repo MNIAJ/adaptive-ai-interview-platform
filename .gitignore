@@ -8,3 +8,7 @@ backend/target/
 .jwt-secret.local
 .idea/
 campus-placement-mvp/
+
+# Local configuration
+.env.*
+!.env.example

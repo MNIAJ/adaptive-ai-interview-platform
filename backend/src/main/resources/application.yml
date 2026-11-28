@@ -3,6 +3,9 @@ server:
   port: ${PORT:8080}
 
 spring:
+  config:
+    import: "optional:file:./.env[.properties]"
+
   datasource:
     url: ${DB_URL:jdbc:postgresql://localhost:5432/interview_platform}
     username: ${DB_USER:postgres}
@@ -36,5 +39,8 @@ app:
 
   ai:
     provider: ${AI_PROVIDER:springai}
+    groq:
+      api-key: ${GROQ_API_KEY:}
+      model: ${GROQ_MODEL:openai/gpt-oss-20b}
 
   frontend-url: ${FRONTEND_URL:http://localhost:5173}
